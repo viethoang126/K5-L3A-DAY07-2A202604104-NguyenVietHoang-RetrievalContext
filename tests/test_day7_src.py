@@ -109,6 +109,32 @@ class TestAgent(unittest.TestCase):
         self.assertTrue(any(e["event"] == "search_rejected" for e in r["events"]))
         self.assertEqual(r["status"], "abstain")
 
+    def test_grouped_citations_accepted(self):
+        client = FakeClient([("search_law", {"query": "x"}),
+                             ("submit_answer", {"answer": "200 giờ, ngoại lệ 300 giờ [c1, c2]", "citations": ["c1", "c2"]})])
+        r = run_agent("q", client, StaticRetriever(), top_k=2, **self.kw)
+        self.assertEqual((r["status"], r["citations"]), ("answered", ["c1", "c2"]))
+
+    def test_hallucinated_id_rejected(self):
+        client = FakeClient([("search_law", {"query": "x"}),
+                             ("submit_answer", {"answer": "a [c1] b [c1:s99]", "citations": ["c1", "c1:s99"]}),
+                             ("submit_answer", {"answer": "a [c1]", "citations": ["c1"]})])
+        r = run_agent("q", client, StaticRetriever(), top_k=2, **self.kw)
+        self.assertEqual((r["status"], r["citations"]), ("answered", ["c1"]))
+
+    def test_search_tool_removed_after_budget(self):
+        seen_tools = []
+
+        class Spy(FakeClient):
+            def chat(self, messages, tools=None):
+                seen_tools.append([t["function"]["name"] for t in tools])
+                return super().chat(messages, tools)
+
+        client = Spy([("search_law", {"query": "a"}), ("abstain", {"reason": "x"})])
+        run_agent("q", client, StaticRetriever(), max_searches=1, **self.kw)
+        self.assertIn("search_law", seen_tools[0])
+        self.assertNotIn("search_law", seen_tools[1])
+
     def test_abstain(self):
         client = FakeClient([("search_law", {"query": "lương tối thiểu vùng"}), ("abstain", {"reason": "không có số"})])
         r = run_agent("q", client, StaticRetriever(), **self.kw)

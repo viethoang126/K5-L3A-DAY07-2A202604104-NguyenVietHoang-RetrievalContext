@@ -24,8 +24,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", required=True)
     ap.add_argument("--split", choices=("dev", "test"), required=True)
+    ap.add_argument("--root", default="agent", help="results subfolder, e.g. agent or agent_v1")
     args = ap.parse_args()
-    out = RESULTS_DIR / "agent" / args.split / args.config
+    out = RESULTS_DIR / args.root / args.split / args.config
     traces = json.loads((out / "traces.json").read_text(encoding="utf-8"))
     chunks = {c["id"]: c for c in json.loads(CHUNKS_PATH.read_text(encoding="utf-8"))}
     gold = {q["id"]: q for q in json.loads(QUESTIONS_PATH.read_text(encoding="utf-8"))}

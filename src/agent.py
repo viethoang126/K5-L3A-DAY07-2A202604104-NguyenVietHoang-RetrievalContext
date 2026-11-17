@@ -13,6 +13,7 @@ decide with what it has; step limit -> abstain ("step_limit"). Invalid citations
 correction round, then the case is recorded as abstain ("invalid_citations").
 """
 import json
+import re
 import time
 from typing import Any
 
@@ -47,6 +48,17 @@ TOOLS = [
 ]
 
 ABSTAIN_TEXT = "Không đủ bằng chứng trong Bộ luật Lao động 2019 để trả lời."
+AGENT_VERSION = "v2"   # v1: exact "[id]" match only, search tool offered after budget exhausted
+
+def inline_citations(answer: str) -> list[str]:
+    """Chunk IDs cited inside [...] in the answer; v2 accepts grouped forms [a, b] / [a; b]."""
+    out: list[str] = []
+    for group in re.findall(r"\[([^\[\]]+)\]", answer):
+        for cid in re.split(r"[,;]", group):
+            cid = cid.strip()
+            if cid and cid not in out:
+                out.append(cid)
+    return out
 
 
 def _user_message(question: str, filters: dict[str, Any] | None, chapters: dict[str, str]) -> str:
@@ -75,13 +87,16 @@ def run_agent(question: str, client, retriever, *, by_order: dict[int, dict[str,
 
     def finish(status, answer, citations, reason):
         context, _ = pack([by_id[i] for i in context_ids], budget)
-        return {"status": status, "answer": answer, "citations": citations, "stop_reason": reason,
+        return {"status": status, "answer": answer, "citations": citations, "stop_reason": reason, "agent_version": AGENT_VERSION,
                 "events": events, "context_ids": list(context_ids), "final_context": context,
                 "n_searches": n_search, "usage": usage,
                 "elapsed_s": round(time.perf_counter() - t_start, 2)}
 
     for _step in range(max_searches + 4):
-        resp = client.chat(messages, TOOLS)
+        # v2: once the search budget is used, search_law is no longer offered -> the model
+        # must answer or abstain (v1 let it keep calling search until the step limit).
+        tools = TOOLS if n_search < max_searches else [t for t in TOOLS if t["function"]["name"] != "search_law"]
+        resp = client.chat(messages, tools)
         u = resp.get("usage") or {}
         usage["prompt_tokens"] += int(u.get("prompt_tokens") or 0)
         usage["completion_tokens"] += int(u.get("completion_tokens") or 0)
@@ -148,9 +163,10 @@ def run_agent(question: str, client, retriever, *, by_order: dict[int, dict[str,
                 messages.append({"role": "tool", "tool_call_id": call.get("id", name), "name": name, "content": content})
             elif name == "submit_answer":
                 answer = str(args.get("answer", "")).strip()
-                cits = [str(c) for c in (args.get("citations") or [])]
-                cits += [i for i in context_ids if f"[{i}]" in answer and i not in cits]  # cited inline only
-                bad = [c for c in cits if c not in context_ids or f"[{c}]" not in answer]
+                inline = inline_citations(answer)
+                cits = [str(c).strip() for c in (args.get("citations") or [])]
+                cits += [i for i in inline if i not in cits and (":" in i or i in context_ids)]  # cited inline only
+                bad = [c for c in cits if c not in context_ids or c not in inline]
                 good = [c for c in cits if c not in bad]
                 events.append({"event": "submit_answer", "answer": answer, "citations": cits, "invalid": bad})
                 if answer and good and not bad:
@@ -161,7 +177,9 @@ def run_agent(question: str, client, retriever, *, by_order: dict[int, dict[str,
                     return finish("abstain", ABSTAIN_TEXT, [], "invalid_citations")
                 corrections += 1
                 messages.append({"role": "tool", "tool_call_id": call.get("id", name), "name": name,
-                                 "content": f"Citation không hợp lệ: {bad or 'thiếu citation'}. Chỉ dùng chunk-id trong ngữ cảnh {context_ids} và ghi [chunk-id] trong câu trả lời."})
+                                 "content": (f"Citation không hợp lệ: {bad or 'thiếu citation'}. Các ID không có trong ngữ cảnh là KHÔNG TỒN TẠI, "
+                                             f"đừng đoán ID. Chỉ dùng đúng các chunk-id đã hiển thị: {context_ids}, "
+                                             "và ghi mỗi ID trong câu trả lời dạng [chunk-id].")})
             elif name == "abstain":
                 events.append({"event": "abstain", "reason": args.get("reason")})
                 return finish("abstain", ABSTAIN_TEXT, [], "abstain_tool")
