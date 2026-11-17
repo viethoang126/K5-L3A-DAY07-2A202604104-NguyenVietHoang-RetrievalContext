@@ -1,0 +1,114 @@
+[
+ {
+  "query_id": "q16",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [
+   true
+  ],
+  "citations": [
+   "blld-2019:B:d169:s00"
+  ],
+  "answer_grade": 2,
+  "reason": "Đúng và đủ so với expected_answer; citation chứa thông tin được nêu."
+ },
+ {
+  "query_id": "q17",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [
+   true
+  ],
+  "citations": [
+   "blld-2019:B:d078:s00"
+  ],
+  "answer_grade": 2,
+  "reason": "Đúng và đủ so với expected_answer; citation chứa thông tin được nêu."
+ },
+ {
+  "query_id": "q18",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [
+   true
+  ],
+  "citations": [
+   "blld-2019:B:d062:s00"
+  ],
+  "answer_grade": 2,
+  "reason": "Đúng và đủ so với expected_answer; citation chứa thông tin được nêu."
+ },
+ {
+  "query_id": "q19",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [
+   true
+  ],
+  "citations": [
+   "blld-2019:B:d061:s00"
+  ],
+  "answer_grade": 2,
+  "reason": "Đúng và đủ so với expected_answer; citation chứa thông tin được nêu."
+ },
+ {
+  "query_id": "q20",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [
+   true
+  ],
+  "citations": [
+   "blld-2019:B:d190:s00"
+  ],
+  "answer_grade": 2,
+  "reason": "Đúng và đủ so với expected_answer; citation chứa thông tin được nêu."
+ },
+ {
+  "query_id": "q21",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [
+   true
+  ],
+  "citations": [
+   "blld-2019:B:d113:s00"
+  ],
+  "answer_grade": 2,
+  "reason": "Đúng và đủ so với expected_answer; citation chứa thông tin được nêu."
+ },
+ {
+  "query_id": "q22",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [
+   true
+  ],
+  "citations": [
+   "blld-2019:B:d128:s00"
+  ],
+  "answer_grade": 2,
+  "reason": "Đúng và đủ so với expected_answer; citation chứa thông tin được nêu."
+ },
+ {
+  "query_id": "q23",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [
+   true
+  ],
+  "citations": [
+   "blld-2019:B:d139:s00"
+  ],
+  "answer_grade": 2,
+  "reason": "Đúng và đủ so với expected_answer; citation chứa thông tin được nêu."
+ },
+ {
+  "query_id": "u03",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [],
+  "citations": [],
+  "abstention_correct": true,
+  "reason": "Từ chối đúng, lý do nêu bộ luật không chứa con số được hỏi; không thêm khẳng định."
+ },
+ {
+  "query_id": "u04",
+  "reviewer": "Claude Code (AI-assisted), cần sinh viên xác nhận",
+  "citation_support": [],
+  "citations": [],
+  "abstention_correct": true,
+  "reason": "Từ chối đúng, lý do nêu bộ luật không chứa con số được hỏi; không thêm khẳng định."
+ }
+]

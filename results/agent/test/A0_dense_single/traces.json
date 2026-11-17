@@ -1,0 +1,1305 @@
+[
+ {
+  "query_id": "q16",
+  "split": "test",
+  "question": "Tuổi nghỉ hưu trong điều kiện lao động bình thường được điều chỉnh đến bao nhiêu tuổi?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Tuổi nghỉ hưu của người lao động trong điều kiện lao động bình thường được điều chỉnh theo lộ trình cho đến khi đủ 62 tuổi đối với lao động nam vào năm 2028 và đủ 60 tuổi đối với lao động nữ vào năm 2035 [blld-2019:B:d169:s00].",
+  "citations": [
+   "blld-2019:B:d169:s00"
+  ],
+  "stop_reason": "answer",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"tuổi nghỉ hưu điều kiện lao động bình thường\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 26,
+     "prompt_tokens": 558,
+     "total_tokens": 584
+    },
+    "latency_s": 1.347
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "tuổi nghỉ hưu điều kiện lao động bình thường",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 119.5,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d169:s00",
+      "score": 0.9306,
+      "page": 67,
+      "chuong": "XII",
+      "dieu": 169
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d169:s01",
+      "score": 0.91379,
+      "page": 68,
+      "chuong": "XII",
+      "dieu": 169
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d219:s00",
+      "score": 0.91099,
+      "page": 89,
+      "chuong": "XVII",
+      "dieu": 219
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d169:s00",
+     "blld-2019:B:d169:s01",
+     "blld-2019:B:d219:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d169:s00",
+     "blld-2019:B:d169:s01",
+     "blld-2019:B:d219:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"citations\":[\"blld-2019:B:d169:s00\"],\"answer\":\"Tuổi nghỉ hưu của người lao động trong điều kiện lao động bình thường được điều chỉnh theo lộ trình cho đến khi đủ 62 tuổi đối với lao động nam vào năm 2028 và đủ 60 tuổi đối với lao động nữ vào năm 2035 [blld-2019:B:d169:s00].\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 118,
+     "prompt_tokens": 1484,
+     "total_tokens": 1602
+    },
+    "latency_s": 1.56
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Tuổi nghỉ hưu của người lao động trong điều kiện lao động bình thường được điều chỉnh theo lộ trình cho đến khi đủ 62 tuổi đối với lao động nam vào năm 2028 và đủ 60 tuổi đối với lao động nữ vào năm 2035 [blld-2019:B:d169:s00].",
+    "citations": [
+     "blld-2019:B:d169:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d169:s00",
+   "blld-2019:B:d169:s01",
+   "blld-2019:B:d219:s00"
+  ],
+  "final_context": "[blld-2019:B:d169:s00] (Chương XII, Điều 169, trang 67)\nĐiều 169. Tuổi nghỉ hưu\n1. Người lao động bảo đảm điều kiện về thời gian đóng bảo hiểm xã hội\ntheo quy định của pháp luật về bảo hiểm xã hội được hưởng lương hưu khi đủ\ntuổi nghỉ hưu.\n2. Tuổi nghỉ hưu của người lao động trong điều kiện lao động bình thường\nđược điều chỉnh theo lộ trình cho đến khi đủ 62 tuổi đối với lao động nam vào\nnăm 2028 và đủ 60 tuổi đối với lao động nữ vào năm 2035.\nKể từ năm 2021, tuổi nghỉ hưu của người lao động trong điều kiện lao động\nbình thường là đủ 60 tuổi 03 tháng đối với lao động nam và đủ 55 tuổi 04 tháng\nđối với lao động nữ; sau đó, cứ mỗi năm tăng thêm 03 tháng đối với lao động nam\nvà 04 tháng đối với lao động nữ.\n3. Người lao động bị suy giảm khả năng lao động; làm nghề, công việc đặc\nbiệt nặng nhọc, độc hại, nguy hiểm; làm nghề, công việc nặng nhọc, độc hại, nguy\nhiểm; làm việc ở vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn có thể nghỉ\nhưu ở tuổi thấp hơn nhưng không quá 05 tuổi so với quy định tại khoản 2 Điều này\ntại thời điểm nghỉ hưu, trừ trường hợp pháp luật có quy định khác.\n\n[blld-2019:B:d169:s01] (Chương XII, Điều 169, trang 68)\n[Chương XII – Điều 169. Tuổi nghỉ hưu] 4. Người lao động có trình độ chuyên môn, kỹ thuật cao và một số trường\nhợp đặc biệt có thể nghỉ hưu ở tuổi cao hơn nhưng không quá 05 tuổi so với quy\nđịnh tại khoản 2 Điều này tại thời điểm nghỉ hưu, trừ trường hợp pháp luật có quy\nđịnh khác.\n5. Chính phủ quy định chi tiết Điều này.\n\n[blld-2019:B:d219:s00] (Chương XVII, Điều 219, trang 89-90)\nĐiều 219. Sửa đổi, bổ sung một số điều của các luật có liên quan đến lao động\n1. Sửa đổi, bổ sung một số điều của Luật Bảo hiểm xã hội số 58/2014/QH13\nđã được sửa đổi, bổ sung theo Luật số 84/2015/QH13 và Luật số 35/2018/QH14:\na) Sửa đổi, bổ sung Điều 54 như sau:\n“Điều 54. Điều kiện hưởng lương hưu\n1. Người lao động quy định tại các điểm a, b, c, d, g, h và i khoản 1 Điều 2 của\nLuật này, trừ trường hợp quy định tại khoản 3 Điều này, khi nghỉ việc có đủ 20\nnăm đóng bảo hiểm xã hội trở lên thì được hưởng lương hưu nếu thuộc một trong\ncác trường hợp sau đây:\na) Đủ tuổi theo quy định tại khoản 2 Điều 169 của Bộ luật Lao động;\nb) Đủ tuổi theo quy định tại khoản 3 Điều 169 của Bộ luật Lao động và có\nđủ 15 năm làm nghề, công việc nặng nhọc, độc hại, nguy hiểm hoặc đặc biệt\nnặng nhọc, độc hại, nguy hiểm thuộc danh mục do Bộ Lao động - Thương binh\nvà Xã hội ban hành hoặc có đủ 15 năm làm việc ở vùng có điều kiện kinh tế - xã\nhội đặc biệt khó khăn bao gồm cả thời gian làm việc ở nơi có phụ cấp khu vực\nhệ số 0,7 trở lên trước ngày 01 tháng 01 năm 2021;\nc) Người lao động có tuổi thấp hơn tối đa 10 tuổi so với tuổi nghỉ hưu của",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 2042,
+   "completion_tokens": 144,
+   "llm_calls": 2,
+   "llm_seconds": 2.907
+  },
+  "elapsed_s": 8.06,
+  "cost_usd_if_paid": 0.000973
+ },
+ {
+  "query_id": "q17",
+  "split": "test",
+  "question": "Thỏa ước lao động tập thể có thời hạn bao lâu?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Thỏa ước lao động tập thể có thời hạn từ 01 năm đến 03 năm [blld-2019:B:d078:s00]. Thời hạn cụ thể do các bên thỏa thuận và ghi trong thỏa ước, các bên có quyền thỏa thuận thời hạn khác nhau đối với các nội dung khác nhau của thỏa ước lao động tập thể [blld-2019:B:d078:s00].",
+  "citations": [
+   "blld-2019:B:d078:s00"
+  ],
+  "stop_reason": "answer",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"thỏa ước lao động tập thể có thời hạn bao lâu\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 27,
+     "prompt_tokens": 551,
+     "total_tokens": 578
+    },
+    "latency_s": 1.081
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "thỏa ước lao động tập thể có thời hạn bao lâu",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 20.3,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d078:s00",
+      "score": 0.93797,
+      "page": 35,
+      "chuong": "V",
+      "dieu": 78
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d077:s00",
+      "score": 0.93123,
+      "page": 35,
+      "chuong": "V",
+      "dieu": 77
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d083:s00",
+      "score": 0.927,
+      "page": 37,
+      "chuong": "V",
+      "dieu": 83
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d078:s00",
+     "blld-2019:B:d077:s00",
+     "blld-2019:B:d083:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d078:s00",
+     "blld-2019:B:d077:s00",
+     "blld-2019:B:d083:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"citations\":[\"blld-2019:B:d078:s00\"],\"answer\":\"Thỏa ước lao động tập thể có thời hạn từ 01 năm đến 03 năm [blld-2019:B:d078:s00]. Thời hạn cụ thể do các bên thỏa thuận và ghi trong thỏa ước, các bên có quyền thỏa thuận thời hạn khác nhau đối với các nội dung khác nhau của thỏa ước lao động tập thể [blld-2019:B:d078:s00].\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 137,
+     "prompt_tokens": 1168,
+     "total_tokens": 1305
+    },
+    "latency_s": 2.798
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Thỏa ước lao động tập thể có thời hạn từ 01 năm đến 03 năm [blld-2019:B:d078:s00]. Thời hạn cụ thể do các bên thỏa thuận và ghi trong thỏa ước, các bên có quyền thỏa thuận thời hạn khác nhau đối với các nội dung khác nhau của thỏa ước lao động tập thể [blld-2019:B:d078:s00].",
+    "citations": [
+     "blld-2019:B:d078:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d078:s00",
+   "blld-2019:B:d077:s00",
+   "blld-2019:B:d083:s00"
+  ],
+  "final_context": "[blld-2019:B:d078:s00] (Chương V, Điều 78, trang 35-36)\nĐiều 78. Hiệu lực và thời hạn của thỏa ước lao động tập thể\n1. Ngày có hiệu lực của thỏa ước lao động tập thể do các bên thỏa thuận và\nđược ghi trong thỏa ước. Trường hợp các bên không thỏa thuận ngày có hiệu lực\nthì thỏa ước lao động tập thể có hiệu lực kể từ ngày ký kết.\nThỏa ước lao động tập thể sau khi có hiệu lực phải được các bên tôn trọng\nthực hiện.\n2. Thỏa ước lao động tập thể doanh nghiệp có hiệu lực áp dụng đối với người\nsử dụng lao động và toàn bộ người lao động của doanh nghiệp. Thỏa ước lao động\ntập thể ngành và thỏa ước lao động tập thể có nhiều doanh nghiệp có hiệu lực áp\ndụng đối với toàn bộ người sử dụng lao động và người lao động của các doanh\nnghiệp tham gia thỏa ước lao động tập thể.\n3. Thỏa ước lao động tập thể có thời hạn từ 01 năm đến 03 năm. Thời hạn cụ\nthể do các bên thỏa thuận và ghi trong thỏa ước lao động tập thể. Các bên có quyền\nthỏa thuận thời hạn khác nhau đối với các nội dung của thỏa ước lao động tập thể.\n\n[blld-2019:B:d077:s00] (Chương V, Điều 77, trang 35)\nĐiều 77. Gửi thỏa ước lao động tập thể\nTrong thời hạn 10 ngày kể từ ngày thỏa ước lao động tập thể được ký kết, người\nsử dụng lao động tham gia thỏa ước phải gửi 01 bản thỏa ước lao động tập thể đến cơ\nquan chuyên môn về lao động thuộc Ủy ban nhân dân cấp tỉnh nơi đặt trụ sở chính.\n\n[blld-2019:B:d083:s00] (Chương V, Điều 83, trang 37-38)\nĐiều 83. Thỏa ước lao động tập thể hết hạn\nTrong thời hạn 90 ngày trước ngày thỏa ước lao động tập thể hết hạn,\ncác bên có thể thương lượng để kéo dài thời hạn của thỏa ước lao động tập\nthể hoặc ký kết thỏa ước lao động tập thể mới. Trường hợp các bên thỏa\nthuận kéo dài thời hạn của thỏa ước lao động tập thể thì phải lấy ý kiến theo\nquy định tại Điều 76 của Bộ luật này.\nKhi thỏa ước lao động tập thể hết hạn mà các bên vẫn tiếp tục thương lượng thì\nthỏa ước lao động tập thể cũ vẫn được tiếp tục thực hiện trong thời hạn không quá\n90 ngày kể từ ngày thỏa ước lao động tập thể hết hạn, trừ trường hợp các bên có\nthỏa thuận khác.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1719,
+   "completion_tokens": 164,
+   "llm_calls": 2,
+   "llm_seconds": 3.879
+  },
+  "elapsed_s": 14.23,
+  "cost_usd_if_paid": 0.000926
+ },
+ {
+  "query_id": "q18",
+  "split": "test",
+  "question": "Công ty bỏ tiền cho nhân viên đi học nâng cao tay nghề thì hai bên phải ký giấy tờ gì?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Khi công ty bỏ kinh phí cho nhân viên đi học nâng cao trình độ, kỹ năng nghề hoặc đào tạo lại (ở trong nước hoặc nước ngoài), hai bên phải ký kết **hợp đồng đào tạo nghề** [blld-2019:B:d062:s00]. \n\nQuy định về hợp đồng đào tạo nghề:\n- **Hình thức:** Phải được lập thành 02 bản, mỗi bên giữ 01 bản [blld-2019:B:d062:s00].\n- **Các nội dung chủ yếu bao gồm:** \n  + Nghề đào tạo [blld-2019:B:d062:s00];\n  + Địa điểm, thời gian và tiền lương trong thời gian đào tạo [blld-2019:B:d062:s00];\n  + Thời hạn cam kết phải làm việc sau khi được đào tạo [blld-2019:B:d062:s00];\n  + Chi phí đào tạo và trách nhiệm hoàn trả chi phí đào tạo [blld-2019:B:d062:s00];\n  + Trách nhiệm của người sử dụng lao động [blld-2019:B:d062:s00];\n  + Trách nhiệm của người lao động [blld-2019:B:d062:s00].",
+  "citations": [
+   "blld-2019:B:d062:s00"
+  ],
+  "stop_reason": "answer",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"đào tạo nâng cao trình độ tay nghề hợp đồng đào tạo\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 28,
+     "prompt_tokens": 560,
+     "total_tokens": 588
+    },
+    "latency_s": 1.156
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "đào tạo nâng cao trình độ tay nghề hợp đồng đào tạo",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 20.8,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d062:s00",
+      "score": 0.8776,
+      "page": 28,
+      "chuong": "IV",
+      "dieu": 62
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d060:s00",
+      "score": 0.86463,
+      "page": 27,
+      "chuong": "IV",
+      "dieu": 60
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d059:s00",
+      "score": 0.86114,
+      "page": 26,
+      "chuong": "IV",
+      "dieu": 59
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d062:s00",
+     "blld-2019:B:d060:s00",
+     "blld-2019:B:d059:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d062:s00",
+     "blld-2019:B:d060:s00",
+     "blld-2019:B:d059:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"Khi công ty bỏ kinh phí cho nhân viên đi học nâng cao trình độ, kỹ năng nghề hoặc đào tạo lại (ở trong nước hoặc nước ngoài), hai bên phải ký kết **hợp đồng đào tạo nghề** [blld-2019:B:d062:s00]. \\n\\nQuy định về hợp đồng đào tạo nghề:\\n- **Hình thức:** Phải được lập thành 02 bản, mỗi bên giữ 01 bản [blld-2019:B:d062:s00].\\n- **Các nội dung chủ yếu bao gồm:** \\n  + Nghề đào tạo [blld-2019:B:d062:s00];\\n  + Địa điểm, thời gian và tiền lương trong thời gian đào tạo [blld-2019:B:d062:s00];\\n  + Thời hạn cam kết phải làm việc sau khi được đào tạo [blld-2019:B:d062:s00];\\n  + Chi phí đào tạo và trách nhiệm hoàn trả chi phí đào tạo [blld-2019:B:d062:s00];\\n  + Trách nhiệm của người sử dụng lao động [blld-2019:B:d062:s00];\\n  + Trách nhiệm của người lao động [blld-2019:B:d062:s00].\",\"citations\":[\"blld-2019:B:d062:s00\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 365,
+     "prompt_tokens": 1354,
+     "total_tokens": 1719
+    },
+    "latency_s": 1.849
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Khi công ty bỏ kinh phí cho nhân viên đi học nâng cao trình độ, kỹ năng nghề hoặc đào tạo lại (ở trong nước hoặc nước ngoài), hai bên phải ký kết **hợp đồng đào tạo nghề** [blld-2019:B:d062:s00]. \n\nQuy định về hợp đồng đào tạo nghề:\n- **Hình thức:** Phải được lập thành 02 bản, mỗi bên giữ 01 bản [blld-2019:B:d062:s00].\n- **Các nội dung chủ yếu bao gồm:** \n  + Nghề đào tạo [blld-2019:B:d062:s00];\n  + Địa điểm, thời gian và tiền lương trong thời gian đào tạo [blld-2019:B:d062:s00];\n  + Thời hạn cam kết phải làm việc sau khi được đào tạo [blld-2019:B:d062:s00];\n  + Chi phí đào tạo và trách nhiệm hoàn trả chi phí đào tạo [blld-2019:B:d062:s00];\n  + Trách nhiệm của người sử dụng lao động [blld-2019:B:d062:s00];\n  + Trách nhiệm của người lao động [blld-2019:B:d062:s00].",
+    "citations": [
+     "blld-2019:B:d062:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d062:s00",
+   "blld-2019:B:d060:s00",
+   "blld-2019:B:d059:s00"
+  ],
+  "final_context": "[blld-2019:B:d062:s00] (Chương IV, Điều 62, trang 28)\nĐiều 62. Hợp đồng đào tạo nghề giữa người sử dụng lao động, người lao\nđộng và chi phí đào tạo nghề\n1. Hai bên phải ký kết hợp đồng đào tạo nghề trong trường hợp người lao động\nđược đào tạo nâng cao trình độ, kỹ năng nghề, đào tạo lại ở trong nước hoặc nước\nngoài từ kinh phí của người sử dụng lao động, kể cả kinh phí do đối tác tài trợ cho\nngười sử dụng lao động.\nHợp đồng đào tạo nghề phải làm thành 02 bản, mỗi bên giữ 01 bản.\n2. Hợp đồng đào tạo nghề phải có các nội dung chủ yếu sau đây:\na) Nghề đào tạo;\nb) Địa điểm, thời gian và tiền lương trong thời gian đào tạo;\nc) Thời hạn cam kết phải làm việc sau khi được đào tạo;\nd) Chi phí đào tạo và trách nhiệm hoàn trả chi phí đào tạo;\nđ) Trách nhiệm của người sử dụng lao động;\ne) Trách nhiệm của người lao động.\n\n[blld-2019:B:d060:s00] (Chương IV, Điều 60, trang 27)\nĐiều 60. Trách nhiệm của người sử dụng lao động về đào tạo, bồi dưỡng,\nnâng cao trình độ, kỹ năng nghề\n1. Người sử dụng lao động xây dựng kế hoạch hằng năm và dành kinh phí cho\nviệc đào tạo, bồi dưỡng, nâng cao trình độ, kỹ năng nghề, phát triển kỹ năng nghề\ncho người lao động đang làm việc cho mình; đào tạo cho người lao động trước khi\nchuyển làm nghề khác cho mình.\n2. Hằng năm, người sử dụng lao động thông báo kết quả đào tạo, bồi dưỡng,\nnâng cao trình độ, kỹ năng nghề cho cơ quan chuyên môn về lao động thuộc\nỦy ban nhân dân cấp tỉnh.\n\n[blld-2019:B:d059:s00] (Chương IV, Điều 59, trang 26-27)\nChương IV\nGIÁO DỤC NGHỀ NGHIỆP VÀ PHÁT TRIỂN KỸ NĂNG NGHỀ\n\nĐiều 59. Đào tạo nghề nghiệp và phát triển kỹ năng nghề\n1. Người lao động được tự do lựa chọn đào tạo nghề nghiệp, tham gia đánh\ngiá, công nhận kỹ năng nghề quốc gia, phát triển năng lực nghề nghiệp phù hợp\nvới nhu cầu việc làm và khả năng của mình.\n2. Nhà nước có chính sách khuyến khích người sử dụng lao động có đủ điều\nkiện đào tạo nghề nghiệp và phát triển kỹ năng nghề cho người lao động đang làm\nviệc cho mình và người lao động khác trong xã hội thông qua hoạt động sau đây:\na) Thành lập cơ sở giáo dục nghề nghiệp hoặc mở lớp đào tạo nghề tại nơi làm\nviệc để đào tạo, đào tạo lại, bồi dưỡng, nâng cao trình độ, kỹ năng nghề cho người\nlao động; phối hợp với cơ sở giáo dục nghề nghiệp đào tạo các trình độ sơ cấp,\ntrung cấp, cao đẳng và các chương trình đào tạo nghề nghiệp khác theo quy định;\nb) Tổ chức thi kỹ năng nghề cho người lao động; tham gia hội đồng kỹ năng\nnghề; dự báo nhu cầu và xây dựng tiêu chuẩn kỹ năng nghề; tổ chức đánh giá và\ncông nhận kỹ năng nghề; phát triển năng lực nghề nghiệp cho người lao động.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1914,
+   "completion_tokens": 393,
+   "llm_calls": 2,
+   "llm_seconds": 3.005
+  },
+  "elapsed_s": 12.04,
+  "cost_usd_if_paid": 0.001557
+ },
+ {
+  "query_id": "q19",
+  "split": "test",
+  "question": "Người học nghề, tập nghề tại doanh nghiệp phải từ bao nhiêu tuổi?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Người học nghề, tập nghề phải đủ 14 tuổi trở lên và có đủ sức khỏe phù hợp với yêu cầu học nghề, tập nghề [blld-2019:B:d061:s00]. \nĐối với người học nghề, tập nghề thuộc danh mục nghề, công việc nặng nhọc, độc hại, nguy hiểm hoặc đặc biệt nặng nhọc, độc hại, nguy hiểm phải từ đủ 18 tuổi trở lên, trừ lĩnh vực nghệ thuật, thể dục, thể thao [blld-2019:B:d061:s00].",
+  "citations": [
+   "blld-2019:B:d061:s00"
+  ],
+  "stop_reason": "answer",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"người học nghề tập nghề tại doanh nghiệp bao nhiêu tuổi\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 27,
+     "prompt_tokens": 553,
+     "total_tokens": 580
+    },
+    "latency_s": 1.159
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "người học nghề tập nghề tại doanh nghiệp bao nhiêu tuổi",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 22.8,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d061:s00",
+      "score": 0.9147,
+      "page": 27,
+      "chuong": "IV",
+      "dieu": 61
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d145:s00",
+      "score": 0.87194,
+      "page": 59,
+      "chuong": "XI",
+      "dieu": 145
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d219:s03",
+      "score": 0.86987,
+      "page": 91,
+      "chuong": "XVII",
+      "dieu": 219
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d061:s00",
+     "blld-2019:B:d145:s00"
+    ],
+    "dropped_budget": [
+     "blld-2019:B:d219:s03"
+    ],
+    "context_ids": [
+     "blld-2019:B:d061:s00",
+     "blld-2019:B:d145:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"citations\":[\"blld-2019:B:d061:s00\"],\"answer\":\"Người học nghề, tập nghề phải đủ 14 tuổi trở lên và có đủ sức khỏe phù hợp với yêu cầu học nghề, tập nghề [blld-2019:B:d061:s00]. \\nĐối với người học nghề, tập nghề thuộc danh mục nghề, công việc nặng nhọc, độc hại, nguy hiểm hoặc đặc biệt nặng nhọc, độc hại, nguy hiểm phải từ đủ 18 tuổi trở lên, trừ lĩnh vực nghệ thuật, thể dục, thể thao [blld-2019:B:d061:s00].\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 166,
+     "prompt_tokens": 1303,
+     "total_tokens": 1469
+    },
+    "latency_s": 1.35
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Người học nghề, tập nghề phải đủ 14 tuổi trở lên và có đủ sức khỏe phù hợp với yêu cầu học nghề, tập nghề [blld-2019:B:d061:s00]. \nĐối với người học nghề, tập nghề thuộc danh mục nghề, công việc nặng nhọc, độc hại, nguy hiểm hoặc đặc biệt nặng nhọc, độc hại, nguy hiểm phải từ đủ 18 tuổi trở lên, trừ lĩnh vực nghệ thuật, thể dục, thể thao [blld-2019:B:d061:s00].",
+    "citations": [
+     "blld-2019:B:d061:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d061:s00",
+   "blld-2019:B:d145:s00"
+  ],
+  "final_context": "[blld-2019:B:d061:s00] (Chương IV, Điều 61, trang 27)\nĐiều 61. Học nghề, tập nghề để làm việc cho người sử dụng lao động\n1. Học nghề để làm việc cho người sử dụng lao động là việc người sử dụng\nlao động tuyển người vào để đào tạo nghề nghiệp tại nơi làm việc. Thời gian\nhọc nghề theo chương trình đào tạo của từng trình độ theo quy định của Luật\nGiáo dục nghề nghiệp.\n2. Tập nghề để làm việc cho người sử dụng lao động là việc người sử dụng lao\nđộng tuyển người vào để hướng dẫn thực hành công việc, tập làm nghề theo vị trí\nviệc làm tại nơi làm việc. Thời hạn tập nghề không quá 03 tháng.\n3. Người sử dụng lao động tuyển người vào học nghề, tập nghề để làm việc\ncho mình thì không phải đăng ký hoạt động giáo dục nghề nghiệp; không được thu\nhọc phí; phải ký hợp đồng đào tạo theo quy định của Luật Giáo dục nghề nghiệp.\n4. Người học nghề, người tập nghề phải đủ 14 tuổi trở lên và phải có đủ sức\nkhỏe phù hợp với yêu cầu học nghề, tập nghề. Người học nghề, người tập nghề\nthuộc danh mục nghề, công việc nặng nhọc, độc hại, nguy hiểm hoặc đặc biệt nặng\nnhọc, độc hại, nguy hiểm do Bộ trưởng Bộ Lao động - Thương binh và Xã hội ban\nhành phải từ đủ 18 tuổi trở lên, trừ lĩnh vực nghệ thuật, thể dục, thể thao.\n\n[blld-2019:B:d145:s00] (Chương XI, Điều 145, trang 59)\nĐiều 145. Sử dụng người chưa đủ 15 tuổi làm việc\n1. Khi sử dụng người chưa đủ 15 tuổi làm việc, người sử dụng lao động phải\ntuân theo quy định sau đây:\na) Phải giao kết hợp đồng lao động bằng văn bản với người chưa đủ 15 tuổi và\nngười đại diện theo pháp luật của người đó;\nb) Bố trí giờ làm việc không ảnh hưởng đến thời gian học tập của người chưa\nđủ 15 tuổi;\nc) Phải có giấy khám sức khỏe của cơ sở khám bệnh, chữa bệnh có thẩm quyền\nxác nhận sức khỏe của người chưa đủ 15 tuổi phù hợp với công việc và tổ chức\nkiểm tra sức khỏe định kỳ ít nhất một lần trong 06 tháng;\nd) Bảo đảm điều kiện làm việc, an toàn, vệ sinh lao động phù hợp với lứa tuổi.\n2. Người sử dụng lao động chỉ được tuyển dụng và sử dụng người từ đủ 13 tuổi\nđến chưa đủ 15 tuổi vào làm các công việc nhẹ theo quy định tại khoản 3 Điều 143\ncủa Bộ luật này.\n3. Người sử dụng lao động không được tuyển dụng và sử dụng người chưa\nđủ 13 tuổi làm việc, trừ các công việc nghệ thuật, thể dục, thể thao nhưng không\nlàm tổn hại đến sự phát triển thể lực, trí lực, nhân cách của người chưa đủ 13 tuổi\nvà phải có sự đồng ý của cơ quan chuyên môn về lao động thuộc Ủy ban nhân dân\ncấp tỉnh.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1856,
+   "completion_tokens": 193,
+   "llm_calls": 2,
+   "llm_seconds": 2.509
+  },
+  "elapsed_s": 12.5,
+  "cost_usd_if_paid": 0.001039
+ },
+ {
+  "query_id": "q20",
+  "split": "test",
+  "question": "Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là bao lâu?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là 01 năm kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp pháp của mình bị vi phạm [blld-2019:B:d190:s00].\n\nTrường hợp người yêu cầu chứng minh được vì sự kiện bất khả kháng, trở ngại khách quan hoặc lý do khác theo quy định của pháp luật mà không thể yêu cầu đúng thời hạn thì thời gian có sự kiện bất khả kháng, trở ngại khách quan hoặc lý do đó không tính vào thời hiệu [blld-2019:B:d190:s00].",
+  "citations": [
+   "blld-2019:B:d190:s00"
+  ],
+  "stop_reason": "answer",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 31,
+     "prompt_tokens": 599,
+     "total_tokens": 630
+    },
+    "latency_s": 1.231
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân",
+    "filter": {
+     "chuong": "XIV"
+    },
+    "top_k": 3,
+    "elapsed_ms": 52.5,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d190:s00",
+      "score": 0.94643,
+      "page": 79,
+      "chuong": "XIV",
+      "dieu": 190
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d194:s00",
+      "score": 0.92779,
+      "page": 81,
+      "chuong": "XIV",
+      "dieu": 194
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d189:s00",
+      "score": 0.92258,
+      "page": 78,
+      "chuong": "XIV",
+      "dieu": 189
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d190:s00",
+     "blld-2019:B:d194:s00",
+     "blld-2019:B:d189:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d190:s00",
+     "blld-2019:B:d194:s00",
+     "blld-2019:B:d189:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là 01 năm kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp pháp của mình bị vi phạm [blld-2019:B:d190:s00].\\n\\nTrường hợp người yêu cầu chứng minh được vì sự kiện bất khả kháng, trở ngại khách quan hoặc lý do khác theo quy định của pháp luật mà không thể yêu cầu đúng thời hạn thì thời gian có sự kiện bất khả kháng, trở ngại khách quan hoặc lý do đó không tính vào thời hiệu [blld-2019:B:d190:s00].\",\"citations\":[\"blld-2019:B:d190:s00\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 185,
+     "prompt_tokens": 1444,
+     "total_tokens": 1629
+    },
+    "latency_s": 1.928
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là 01 năm kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp pháp của mình bị vi phạm [blld-2019:B:d190:s00].\n\nTrường hợp người yêu cầu chứng minh được vì sự kiện bất khả kháng, trở ngại khách quan hoặc lý do khác theo quy định của pháp luật mà không thể yêu cầu đúng thời hạn thì thời gian có sự kiện bất khả kháng, trở ngại khách quan hoặc lý do đó không tính vào thời hiệu [blld-2019:B:d190:s00].",
+    "citations": [
+     "blld-2019:B:d190:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d190:s00",
+   "blld-2019:B:d194:s00",
+   "blld-2019:B:d189:s00"
+  ],
+  "final_context": "[blld-2019:B:d190:s00] (Chương XIV, Điều 190, trang 79)\nĐiều 190. Thời hiệu yêu cầu giải quyết tranh chấp lao động cá nhân\n1. Thời hiệu yêu cầu hòa giải viên lao động thực hiện hòa giải tranh chấp lao\nđộng cá nhân là 06 tháng kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho\nrằng quyền và lợi ích hợp pháp của mình bị vi phạm.\n2. Thời hiệu yêu cầu Hội đồng trọng tài lao động giải quyết tranh chấp lao\nđộng cá nhân là 09 tháng kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho\nrằng quyền và lợi ích hợp pháp của mình bị vi phạm.\n3. Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là 01 năm\nkể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp\npháp của mình bị vi phạm.\n4. Trường hợp người yêu cầu chứng minh được vì sự kiện bất khả kháng, trở\nngại khách quan hoặc lý do khác theo quy định của pháp luật mà không thể yêu\ncầu đúng thời hạn quy định tại Điều này thì thời gian có sự kiện bất khả kháng, trở\nngại khách quan hoặc lý do đó không tính vào thời hiệu yêu cầu giải quyết tranh\nchấp lao động cá nhân.\n\n[blld-2019:B:d194:s00] (Chương XIV, Điều 194, trang 81)\nĐiều 194. Thời hiệu yêu cầu giải quyết tranh chấp lao động tập thể về quyền\n1. Thời hiệu yêu cầu hòa giải viên lao động thực hiện hòa giải tranh chấp lao\nđộng tập thể về quyền là 06 tháng kể từ ngày phát hiện ra hành vi mà bên tranh\nchấp cho rằng quyền hợp pháp của mình bị vi phạm.\n2. Thời hiệu yêu cầu Hội đồng trọng tài lao động giải quyết tranh chấp lao\nđộng tập thể về quyền là 09 tháng kể từ ngày phát hiện ra hành vi mà bên tranh\nchấp cho rằng quyền hợp pháp của mình bị vi phạm.\n3. Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động tập thể về quyền\nlà 01 năm kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền\nhợp pháp của mình bị vi phạm.\n\n[blld-2019:B:d189:s00] (Chương XIV, Điều 189, trang 78)\nĐiều 189. Giải quyết tranh chấp lao động cá nhân của Hội đồng trọng tài\nlao động\n1. Trên cơ sở đồng thuận, các bên tranh chấp có quyền yêu cầu Hội đồng trọng\ntài lao động giải quyết tranh chấp trong trường hợp quy định tại khoản 7 Điều 188\ncủa Bộ luật này. Khi yêu cầu Hội đồng trọng tài lao động giải quyết tranh chấp,\ncác bên không được đồng thời yêu cầu Tòa án giải quyết, trừ trường hợp quy định\ntại khoản 4 Điều này.\n2. Trong thời hạn 07 ngày làm việc kể từ ngày nhận được yêu cầu giải quyết\ntranh chấp theo quy định tại khoản 1 Điều này, Ban trọng tài lao động phải được\nthành lập để giải quyết tranh chấp.\n3. Trong thời hạn 30 ngày kể từ ngày Ban trọng tài lao động được thành lập,\nBan trọng tài lao động phải ra quyết định về việc giải quyết tranh chấp và gửi cho\ncác bên tranh chấp.\n4. Trường hợp hết thời hạn quy định tại khoản 2 Điều này mà Ban trọng tài lao\nđộng không được thành lập hoặc hết thời hạn quy định tại khoản 3 Điều này mà\nBan trọng tài lao động không ra quyết định giải quyết tranh chấp thì các bên có\nquyền yêu cầu Tòa án giải quyết.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 2043,
+   "completion_tokens": 216,
+   "llm_calls": 2,
+   "llm_seconds": 3.159
+  },
+  "elapsed_s": 13.57,
+  "cost_usd_if_paid": 0.001153
+ },
+ {
+  "query_id": "q21",
+  "split": "test",
+  "question": "Làm đủ một năm cho một công ty thì người lao động bình thường được nghỉ phép năm bao nhiêu ngày?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Người lao động làm việc đủ 12 tháng (đủ một năm) cho một người sử dụng lao động trong điều kiện bình thường thì được nghỉ hằng năm 12 ngày làm việc và hưởng nguyên lương theo hợp đồng lao động [blld-2019:B:d113:s00].",
+  "citations": [
+   "blld-2019:B:d113:s00"
+  ],
+  "stop_reason": "answer",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"nghỉ hằng năm làm đủ một năm người lao động bình thường\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 30,
+     "prompt_tokens": 560,
+     "total_tokens": 590
+    },
+    "latency_s": 4.196
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "nghỉ hằng năm làm đủ một năm người lao động bình thường",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 58.0,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d113:s00",
+      "score": 0.91872,
+      "page": 47,
+      "chuong": "VII",
+      "dieu": 113
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d114:s00",
+      "score": 0.90002,
+      "page": 47,
+      "chuong": "VII",
+      "dieu": 114
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d113:s01",
+      "score": 0.89851,
+      "page": 47,
+      "chuong": "VII",
+      "dieu": 113
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d113:s00",
+     "blld-2019:B:d114:s00",
+     "blld-2019:B:d113:s01"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d113:s00",
+     "blld-2019:B:d114:s00",
+     "blld-2019:B:d113:s01"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"Người lao động làm việc đủ 12 tháng (đủ một năm) cho một người sử dụng lao động trong điều kiện bình thường thì được nghỉ hằng năm 12 ngày làm việc và hưởng nguyên lương theo hợp đồng lao động [blld-2019:B:d113:s00].\",\"citations\":[\"blld-2019:B:d113:s00\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 107,
+     "prompt_tokens": 1211,
+     "total_tokens": 1318
+    },
+    "latency_s": 1.565
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Người lao động làm việc đủ 12 tháng (đủ một năm) cho một người sử dụng lao động trong điều kiện bình thường thì được nghỉ hằng năm 12 ngày làm việc và hưởng nguyên lương theo hợp đồng lao động [blld-2019:B:d113:s00].",
+    "citations": [
+     "blld-2019:B:d113:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d113:s00",
+   "blld-2019:B:d114:s00",
+   "blld-2019:B:d113:s01"
+  ],
+  "final_context": "[blld-2019:B:d113:s00] (Chương VII, Điều 113, trang 47)\nĐiều 113. Nghỉ hằng năm\n1. Người lao động làm việc đủ 12 tháng cho một người sử dụng lao động thì\nđược nghỉ hằng năm, hưởng nguyên lương theo hợp đồng lao động như sau:\na) 12 ngày làm việc đối với người làm công việc trong điều kiện bình thường;\nb) 14 ngày làm việc đối với người lao động chưa thành niên, lao động là người\nkhuyết tật, người làm nghề, công việc nặng nhọc, độc hại, nguy hiểm;\nc) 16 ngày làm việc đối với người làm nghề, công việc đặc biệt nặng nhọc, độc\nhại, nguy hiểm.\n2. Người lao động làm việc chưa đủ 12 tháng cho một người sử dụng lao động\nthì số ngày nghỉ hằng năm theo tỷ lệ tương ứng với số tháng làm việc.\n3. Trường hợp do thôi việc, bị mất việc làm mà chưa nghỉ hằng năm hoặc chưa\nnghỉ hết số ngày nghỉ hằng năm thì được người sử dụng lao động thanh toán tiền\nlương cho những ngày chưa nghỉ.\n4. Người sử dụng lao động có trách nhiệm quy định lịch nghỉ hằng năm sau khi\ntham khảo ý kiến của người lao động và phải thông báo trước cho người lao động\nbiết. Người lao động có thể thỏa thuận với người sử dụng lao động để nghỉ hằng\nnăm thành nhiều lần hoặc nghỉ gộp tối đa 03 năm một lần.\n\n[blld-2019:B:d114:s00] (Chương VII, Điều 114, trang 47)\nĐiều 114. Ngày nghỉ hằng năm tăng thêm theo thâm niên làm việc\nCứ đủ 05 năm làm việc cho một người sử dụng lao động thì số ngày nghỉ hằng\nnăm của người lao động theo quy định tại khoản 1 Điều 113 của Bộ luật này được\ntăng thêm tương ứng 01 ngày.\n\n[blld-2019:B:d113:s01] (Chương VII, Điều 113, trang 47)\n[Chương VII – Điều 113. Nghỉ hằng năm] 5. Khi nghỉ hằng năm mà chưa đến kỳ trả lương, người lao động được tạm ứng\ntiền lương theo quy định tại khoản 3 Điều 101 của Bộ luật này.\n6. Khi nghỉ hằng năm, nếu người lao động đi bằng các phương tiện đường bộ,\nđường sắt, đường thủy mà số ngày đi đường cả đi và về trên 02 ngày thì từ ngày\nthứ 03 trở đi được tính thêm thời gian đi đường ngoài ngày nghỉ hằng năm và chỉ\nđược tính cho 01 lần nghỉ trong năm.\n7. Chính phủ quy định chi tiết điều này.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1771,
+   "completion_tokens": 137,
+   "llm_calls": 2,
+   "llm_seconds": 5.761
+  },
+  "elapsed_s": 12.63,
+  "cost_usd_if_paid": 0.000874
+ },
+ {
+  "query_id": "q22",
+  "split": "test",
+  "question": "Người lao động bị tạm đình chỉ công việc tối đa bao lâu và trong thời gian đó có được ứng lương không?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "- Thời hạn tạm đình chỉ công việc tối đa không quá 15 ngày, trường hợp đặc biệt không được quá 90 ngày [blld-2019:B:d128:s00].\n- Trong thời gian bị tạm đình chỉ công việc, người lao động được tạm ứng 50% tiền lương trước khi bị đình chỉ công việc [blld-2019:B:d128:s00].",
+  "citations": [
+   "blld-2019:B:d128:s00"
+  ],
+  "stop_reason": "answer",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"tạm đình chỉ công việc tối đa\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 23,
+     "prompt_tokens": 562,
+     "total_tokens": 585
+    },
+    "latency_s": 1.084
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "tạm đình chỉ công việc tối đa",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 58.6,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d128:s00",
+      "score": 0.90363,
+      "page": 53,
+      "chuong": "VIII",
+      "dieu": 128
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d206:s00",
+      "score": 0.88779,
+      "page": 85,
+      "chuong": "XIV",
+      "dieu": 206
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d198:s00",
+      "score": 0.88201,
+      "page": 83,
+      "chuong": "XIV",
+      "dieu": 198
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d128:s00",
+     "blld-2019:B:d206:s00",
+     "blld-2019:B:d198:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d128:s00",
+     "blld-2019:B:d206:s00",
+     "blld-2019:B:d198:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"- Thời hạn tạm đình chỉ công việc tối đa không quá 15 ngày, trường hợp đặc biệt không được quá 90 ngày [blld-2019:B:d128:s00].\\n- Trong thời gian bị tạm đình chỉ công việc, người lao động được tạm ứng 50% tiền lương trước khi bị đình chỉ công việc [blld-2019:B:d128:s00].\",\"citations\":[\"blld-2019:B:d128:s00\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 137,
+     "prompt_tokens": 1088,
+     "total_tokens": 1225
+    },
+    "latency_s": 1.469
+   },
+   {
+    "event": "submit_answer",
+    "answer": "- Thời hạn tạm đình chỉ công việc tối đa không quá 15 ngày, trường hợp đặc biệt không được quá 90 ngày [blld-2019:B:d128:s00].\n- Trong thời gian bị tạm đình chỉ công việc, người lao động được tạm ứng 50% tiền lương trước khi bị đình chỉ công việc [blld-2019:B:d128:s00].",
+    "citations": [
+     "blld-2019:B:d128:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d128:s00",
+   "blld-2019:B:d206:s00",
+   "blld-2019:B:d198:s00"
+  ],
+  "final_context": "[blld-2019:B:d128:s00] (Chương VIII, Điều 128, trang 53)\nĐiều 128. Tạm đình chỉ công việc\n1. Người sử dụng lao động có quyền tạm đình chỉ công việc của người lao\nđộng khi vụ việc vi phạm có những tình tiết phức tạp nếu xét thấy để người lao\nđộng tiếp tục làm việc sẽ gây khó khăn cho việc xác minh. Việc tạm đình chỉ công\nviệc của người lao động chỉ được thực hiện sau khi tham khảo ý kiến của tổ chức\nđại diện người lao động tại cơ sở mà người lao động đang bị xem xét tạm đình chỉ\ncông việc là thành viên.\n2. Thời hạn tạm đình chỉ công việc không được quá 15 ngày, trường hợp đặc\nbiệt không được quá 90 ngày. Trong thời gian bị tạm đình chỉ công việc, người lao\nđộng được tạm ứng 50% tiền lương trước khi bị đình chỉ công việc.\nHết thời hạn tạm đình chỉ công việc, người sử dụng lao động phải nhận người\nlao động trở lại làm việc.\n3. Trường hợp người lao động bị xử lý kỷ luật lao động, người lao động cũng\nkhông phải trả lại số tiền lương đã tạm ứng.\n4. Trường hợp người lao động không bị xử lý kỷ luật lao động thì được người\nsử dụng lao động trả đủ tiền lương cho thời gian bị tạm đình chỉ công việc.\n\n[blld-2019:B:d206:s00] (Chương XIV, Điều 206, trang 85)\nĐiều 206. Trường hợp cấm đóng cửa tạm thời nơi làm việc\n1. Trước 12 giờ so với thời điểm bắt đầu đình công ghi trong quyết định\nđình công.\n2. Sau khi người lao động ngừng đình công.\n\n[blld-2019:B:d198:s00] (Chương XIV, Điều 198, trang 83)\nMục 5\nĐÌNH CÔNG\n\nĐiều 198. Đình công\nĐình công là sự ngừng việc tạm thời, tự nguyện và có tổ chức của người lao\nđộng nhằm đạt được yêu cầu trong quá trình giải quyết tranh chấp lao động và do\ntổ chức đại diện người lao động có quyền thương lượng tập thể là một bên tranh\nchấp lao động tập thể tổ chức và lãnh đạo.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1650,
+   "completion_tokens": 160,
+   "llm_calls": 2,
+   "llm_seconds": 2.553
+  },
+  "elapsed_s": 12.91,
+  "cost_usd_if_paid": 0.000895
+ },
+ {
+  "query_id": "q23",
+  "split": "test",
+  "question": "Lao động nữ được nghỉ thai sản bao lâu, trước khi sinh được nghỉ tối đa bao nhiêu?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Lao động nữ được nghỉ thai sản trước và sau khi sinh con là 06 tháng [blld-2019:B:d139:s00]. Trong đó, thời gian nghỉ trước khi sinh tối đa không quá 02 tháng [blld-2019:B:d139:s00]. (Trường hợp sinh đôi trở lên thì tính từ con thứ 02 trở đi, cứ mỗi con người mẹ được nghỉ thêm 01 tháng) [blld-2019:B:d139:s00].",
+  "citations": [
+   "blld-2019:B:d139:s00"
+  ],
+  "stop_reason": "answer",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"nghỉ thai sản lao động nữ trước khi sinh tối đa bao nhiêu tháng\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 31,
+     "prompt_tokens": 558,
+     "total_tokens": 589
+    },
+    "latency_s": 1.189
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "nghỉ thai sản lao động nữ trước khi sinh tối đa bao nhiêu tháng",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 63.6,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d139:s00",
+      "score": 0.92393,
+      "page": 57,
+      "chuong": "X",
+      "dieu": 139
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d137:s01",
+      "score": 0.91061,
+      "page": 56,
+      "chuong": "X",
+      "dieu": 137
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d139:s01",
+      "score": 0.90243,
+      "page": 57,
+      "chuong": "X",
+      "dieu": 139
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d139:s00",
+     "blld-2019:B:d137:s01",
+     "blld-2019:B:d139:s01"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d139:s00",
+     "blld-2019:B:d137:s01",
+     "blld-2019:B:d139:s01"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"Lao động nữ được nghỉ thai sản trước và sau khi sinh con là 06 tháng [blld-2019:B:d139:s00]. Trong đó, thời gian nghỉ trước khi sinh tối đa không quá 02 tháng [blld-2019:B:d139:s00]. (Trường hợp sinh đôi trở lên thì tính từ con thứ 02 trở đi, cứ mỗi con người mẹ được nghỉ thêm 01 tháng) [blld-2019:B:d139:s00].\",\"citations\":[\"blld-2019:B:d139:s00\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 166,
+     "prompt_tokens": 1336,
+     "total_tokens": 1502
+    },
+    "latency_s": 1.422
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Lao động nữ được nghỉ thai sản trước và sau khi sinh con là 06 tháng [blld-2019:B:d139:s00]. Trong đó, thời gian nghỉ trước khi sinh tối đa không quá 02 tháng [blld-2019:B:d139:s00]. (Trường hợp sinh đôi trở lên thì tính từ con thứ 02 trở đi, cứ mỗi con người mẹ được nghỉ thêm 01 tháng) [blld-2019:B:d139:s00].",
+    "citations": [
+     "blld-2019:B:d139:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d139:s00",
+   "blld-2019:B:d137:s01",
+   "blld-2019:B:d139:s01"
+  ],
+  "final_context": "[blld-2019:B:d139:s00] (Chương X, Điều 139, trang 57)\nĐiều 139. Nghỉ thai sản\n1. Lao động nữ được nghỉ thai sản trước và sau khi sinh con là 06 tháng; thời\ngian nghỉ trước khi sinh không quá 02 tháng.\nTrường hợp lao động nữ sinh đôi trở lên thì tính từ con thứ 02 trở đi, cứ mỗi\ncon, người mẹ được nghỉ thêm 01 tháng.\n2. Trong thời gian nghỉ thai sản, lao động nữ được hưởng chế độ thai sản theo\nquy định của pháp luật về bảo hiểm xã hội.\n3. Hết thời gian nghỉ thai sản theo quy định tại khoản 1 Điều này, nếu có nhu\ncầu, lao động nữ có thể nghỉ thêm một thời gian không hưởng lương sau khi thỏa\nthuận với người sử dụng lao động.\n4. Trước khi hết thời gian nghỉ thai sản theo quy định tại khoản 1 Điều này, lao\nđộng nữ có thể trở lại làm việc khi đã nghỉ ít nhất được 04 tháng nhưng người lao\nđộng phải báo trước, được người sử dụng lao động đồng ý và có xác nhận của cơ\nsở khám bệnh, chữa bệnh có thẩm quyền về việc đi làm sớm không có hại cho sức\nkhỏe của người lao động. Trong trường hợp này, ngoài tiền lương của những ngày\nlàm việc do người sử dụng lao động trả, lao động nữ vẫn tiếp tục được hưởng trợ\ncấp thai sản theo quy định của pháp luật về bảo hiểm xã hội.\n\n[blld-2019:B:d137:s01] (Chương X, Điều 137, trang 56)\n[Chương X – Điều 137. Bảo vệ thai sản] 3. Người sử dụng lao động không được sa thải hoặc đơn phương chấm dứt hợp\nđồng lao động đối với người lao động vì lý do kết hôn, mang thai, nghỉ thai sản,\nnuôi con dưới 12 tháng tuổi, trừ trường hợp người sử dụng lao động là cá nhân\nchết, bị Tòa án tuyên bố mất năng lực hành vi dân sự, mất tích hoặc đã chết hoặc\nngười sử dụng lao động không phải là cá nhân chấm dứt hoạt động hoặc bị cơ quan\nchuyên môn về đăng ký kinh doanh thuộc Ủy ban nhân dân cấp tỉnh ra thông báo\nkhông có người đại diện theo pháp luật, người được ủy quyền thực hiện quyền và\nnghĩa vụ của người đại diện theo pháp luật.\nTrường hợp hợp đồng lao động hết hạn trong thời gian lao động nữ mang thai\nhoặc nuôi con dưới 12 tháng tuổi thì được ưu tiên giao kết hợp đồng lao động mới.\n4. Lao động nữ trong thời gian hành kinh được nghỉ mỗi ngày 30 phút, trong\nthời gian nuôi con dưới 12 tháng tuổi được nghỉ mỗi ngày 60 phút trong thời gian\nlàm việc. Thời gian nghỉ vẫn được hưởng đủ tiền lương theo hợp đồng lao động.\n\n[blld-2019:B:d139:s01] (Chương X, Điều 139, trang 57)\n[Chương X – Điều 139. Nghỉ thai sản] 5. Lao động nam khi vợ sinh con, người lao động nhận nuôi con nuôi dưới\n06 tháng tuổi, lao động nữ mang thai hộ và người lao động là người mẹ nhờ mang thai\nhộ được nghỉ việc hưởng chế độ thai sản theo quy định của pháp luật về bảo hiểm xã hội.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1894,
+   "completion_tokens": 197,
+   "llm_calls": 2,
+   "llm_seconds": 2.611
+  },
+  "elapsed_s": 12.94,
+  "cost_usd_if_paid": 0.001061
+ },
+ {
+  "query_id": "u03",
+  "split": "test",
+  "question": "Người lao động phải đóng bảo hiểm xã hội bắt buộc bao nhiêu phần trăm tiền lương mỗi tháng?",
+  "answerable": false,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "abstain",
+  "answer": "Không đủ bằng chứng trong Bộ luật Lao động 2019 để trả lời.",
+  "citations": [],
+  "stop_reason": "abstain_tool",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"đóng bảo hiểm xã hội bắt buộc bao nhiêu phần trăm tiền lương mỗi tháng\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 31,
+     "prompt_tokens": 558,
+     "total_tokens": 589
+    },
+    "latency_s": 1.299
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "đóng bảo hiểm xã hội bắt buộc bao nhiêu phần trăm tiền lương mỗi tháng",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 57.2,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d168:s00",
+      "score": 0.88259,
+      "page": 67,
+      "chuong": "XII",
+      "dieu": 168
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d219:s00",
+      "score": 0.8781,
+      "page": 89,
+      "chuong": "XVII",
+      "dieu": 219
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d113:s00",
+      "score": 0.8777,
+      "page": 47,
+      "chuong": "VII",
+      "dieu": 113
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d168:s00",
+     "blld-2019:B:d219:s00"
+    ],
+    "dropped_budget": [
+     "blld-2019:B:d113:s00"
+    ],
+    "context_ids": [
+     "blld-2019:B:d168:s00",
+     "blld-2019:B:d219:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"tỷ lệ phần trăm đóng bảo hiểm xã hội bắt buộc\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 27,
+     "prompt_tokens": 1381,
+     "total_tokens": 1408
+    },
+    "latency_s": 1.153
+   },
+   {
+    "event": "search_rejected",
+    "query": "tỷ lệ phần trăm đóng bảo hiểm xã hội bắt buộc",
+    "reason": "Đã hết lượt tìm kiếm. Hãy gọi submit_answer với các đoạn đã có hoặc abstain."
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "abstain",
+      "arguments": "{\"reason\":\"Bộ luật Lao động 2019 không quy định cụ thể tỷ lệ phần trăm tiền lương mà người lao động phải đóng bảo hiểm xã hội bắt buộc hằng tháng (vấn đề này thuộc thẩm quyền của Luật Bảo hiểm xã hội).\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 64,
+     "prompt_tokens": 1441,
+     "total_tokens": 1505
+    },
+    "latency_s": 7.591
+   },
+   {
+    "event": "abstain",
+    "reason": "Bộ luật Lao động 2019 không quy định cụ thể tỷ lệ phần trăm tiền lương mà người lao động phải đóng bảo hiểm xã hội bắt buộc hằng tháng (vấn đề này thuộc thẩm quyền của Luật Bảo hiểm xã hội)."
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d168:s00",
+   "blld-2019:B:d219:s00"
+  ],
+  "final_context": "[blld-2019:B:d168:s00] (Chương XII, Điều 168, trang 67)\nChương XII\nBẢO HIỂM XÃ HỘI, BẢO HIỂM Y TẾ, BẢO HIỂM THẤT NGHIỆP\n\nĐiều 168. Tham gia bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp\n1. Người sử dụng lao động, người lao động phải tham gia bảo hiểm xã hội\nbắt buộc, bảo hiểm y tế, bảo hiểm thất nghiệp; người lao động được hưởng các\nchế độ theo quy định của pháp luật về bảo hiểm xã hội, bảo hiểm y tế và bảo\nhiểm thất nghiệp.\nKhuyến khích người sử dụng lao động, người lao động tham gia các hình thức\nbảo hiểm khác đối với người lao động.\n2. Trong thời gian người lao động nghỉ việc hưởng chế độ bảo hiểm xã hội thì\nngười sử dụng lao động không phải trả lương cho người lao động, trừ trường hợp\nhai bên có thỏa thuận khác.\n3. Đối với người lao động không thuộc đối tượng tham gia bảo hiểm xã hội bắt\nbuộc, bảo hiểm y tế, bảo hiểm thất nghiệp thì người sử dụng lao động có trách\nnhiệm chi trả thêm cùng lúc với kỳ trả lương một khoản tiền cho người lao động\ntương đương với mức người sử dụng lao động đóng bảo hiểm xã hội bắt buộc, bảo\nhiểm y tế, bảo hiểm thất nghiệp cho người lao động theo quy định của pháp luật về\nbảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp.\n\n[blld-2019:B:d219:s00] (Chương XVII, Điều 219, trang 89-90)\nĐiều 219. Sửa đổi, bổ sung một số điều của các luật có liên quan đến lao động\n1. Sửa đổi, bổ sung một số điều của Luật Bảo hiểm xã hội số 58/2014/QH13\nđã được sửa đổi, bổ sung theo Luật số 84/2015/QH13 và Luật số 35/2018/QH14:\na) Sửa đổi, bổ sung Điều 54 như sau:\n“Điều 54. Điều kiện hưởng lương hưu\n1. Người lao động quy định tại các điểm a, b, c, d, g, h và i khoản 1 Điều 2 của\nLuật này, trừ trường hợp quy định tại khoản 3 Điều này, khi nghỉ việc có đủ 20\nnăm đóng bảo hiểm xã hội trở lên thì được hưởng lương hưu nếu thuộc một trong\ncác trường hợp sau đây:\na) Đủ tuổi theo quy định tại khoản 2 Điều 169 của Bộ luật Lao động;\nb) Đủ tuổi theo quy định tại khoản 3 Điều 169 của Bộ luật Lao động và có\nđủ 15 năm làm nghề, công việc nặng nhọc, độc hại, nguy hiểm hoặc đặc biệt\nnặng nhọc, độc hại, nguy hiểm thuộc danh mục do Bộ Lao động - Thương binh\nvà Xã hội ban hành hoặc có đủ 15 năm làm việc ở vùng có điều kiện kinh tế - xã\nhội đặc biệt khó khăn bao gồm cả thời gian làm việc ở nơi có phụ cấp khu vực\nhệ số 0,7 trở lên trước ngày 01 tháng 01 năm 2021;\nc) Người lao động có tuổi thấp hơn tối đa 10 tuổi so với tuổi nghỉ hưu của",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 3380,
+   "completion_tokens": 122,
+   "llm_calls": 3,
+   "llm_seconds": 10.043
+  },
+  "elapsed_s": 25.66,
+  "cost_usd_if_paid": 0.001319
+ },
+ {
+  "query_id": "u04",
+  "split": "test",
+  "question": "Người bị mất việc được hưởng trợ cấp thất nghiệp tối đa bao nhiêu tháng?",
+  "answerable": false,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash-lite",
+  "status": "abstain",
+  "answer": "Không đủ bằng chứng trong Bộ luật Lao động 2019 để trả lời.",
+  "citations": [],
+  "stop_reason": "abstain_tool",
+  "agent_version": "v2",
+  "events": [
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"trợ cấp thất nghiệp tối đa bao nhiêu tháng\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 25,
+     "prompt_tokens": 554,
+     "total_tokens": 579
+    },
+    "latency_s": 2.167
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "trợ cấp thất nghiệp tối đa bao nhiêu tháng",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 23.8,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d047:s00",
+      "score": 0.91277,
+      "page": 21,
+      "chuong": "III",
+      "dieu": 47
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d046:s00",
+      "score": 0.9067,
+      "page": 21,
+      "chuong": "III",
+      "dieu": 46
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d041:s00",
+      "score": 0.88129,
+      "page": 18,
+      "chuong": "III",
+      "dieu": 41
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d047:s00",
+     "blld-2019:B:d046:s00"
+    ],
+    "dropped_budget": [
+     "blld-2019:B:d041:s00"
+    ],
+    "context_ids": [
+     "blld-2019:B:d047:s00",
+     "blld-2019:B:d046:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"bảo hiểm thất nghiệp trợ cấp thất nghiệp số tháng tối đa\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 28,
+     "prompt_tokens": 1182,
+     "total_tokens": 1210
+    },
+    "latency_s": 1.46
+   },
+   {
+    "event": "search_rejected",
+    "query": "bảo hiểm thất nghiệp trợ cấp thất nghiệp số tháng tối đa",
+    "reason": "Đã hết lượt tìm kiếm. Hãy gọi submit_answer với các đoạn đã có hoặc abstain."
+   },
+   {
+    "event": "llm_call",
+    "served_model": "gemini-3.5-flash-lite",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "abstain",
+      "arguments": "{\"reason\":\"Bộ luật Lao động 2019 không quy định chi tiết về số tháng tối đa được hưởng trợ cấp thất nghiệp (vấn đề này thuộc phạm vi pháp luật về bảo hiểm thất nghiệp). Các điều luật trong Bộ luật Lao động chỉ quy định về trợ cấp thôi việc và trợ cấp mất việc làm.\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 78,
+     "prompt_tokens": 1243,
+     "total_tokens": 1321
+    },
+    "latency_s": 1.09
+   },
+   {
+    "event": "abstain",
+    "reason": "Bộ luật Lao động 2019 không quy định chi tiết về số tháng tối đa được hưởng trợ cấp thất nghiệp (vấn đề này thuộc phạm vi pháp luật về bảo hiểm thất nghiệp). Các điều luật trong Bộ luật Lao động chỉ quy định về trợ cấp thôi việc và trợ cấp mất việc làm."
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d047:s00",
+   "blld-2019:B:d046:s00"
+  ],
+  "final_context": "[blld-2019:B:d047:s00] (Chương III, Điều 47, trang 21-22)\nĐiều 47. Trợ cấp mất việc làm\n1. Người sử dụng lao động trả trợ cấp mất việc làm cho người lao động đã làm\nviệc thường xuyên cho mình từ đủ 12 tháng trở lên mà bị mất việc làm theo quy\nđịnh tại khoản 11 Điều 34 của Bộ luật này, cứ mỗi năm làm việc trả 01 tháng tiền\nlương nhưng ít nhất bằng 02 tháng tiền lương.\n2. Thời gian làm việc để tính trợ cấp mất việc làm là tổng thời gian người lao\nđộng đã làm việc thực tế cho người sử dụng lao động trừ đi thời gian người lao\nđộng đã tham gia bảo hiểm thất nghiệp theo quy định của pháp luật về bảo hiểm\nthất nghiệp và thời gian làm việc đã được người sử dụng lao động chi trả trợ cấp\nthôi việc, trợ cấp mất việc làm.\n3. Tiền lương để tính trợ cấp mất việc làm là tiền lương bình quân của 06 tháng\nliền kề theo hợp đồng lao động trước khi người lao động mất việc làm.\n4. Chính phủ quy định chi tiết Điều này.\n\n[blld-2019:B:d046:s00] (Chương III, Điều 46, trang 21)\nĐiều 46. Trợ cấp thôi việc\n1. Khi hợp đồng lao động chấm dứt theo quy định tại các khoản 1, 2, 3, 4, 6, 7, 9\nvà 10 Điều 34 của Bộ luật này thì người sử dụng lao động có trách nhiệm trả trợ\ncấp thôi việc cho người lao động đã làm việc thường xuyên cho mình từ đủ 12\ntháng trở lên, mỗi năm làm việc được trợ cấp một nửa tháng tiền lương, trừ trường\nhợp đủ điều kiện hưởng lương hưu theo quy định của pháp luật về bảo hiểm xã hội\nvà trường hợp quy định tại điểm e khoản 1 Điều 36 của Bộ luật này.\n2. Thời gian làm việc để tính trợ cấp thôi việc là tổng thời gian người lao động\nđã làm việc thực tế cho người sử dụng lao động trừ đi thời gian người lao động đã\ntham gia bảo hiểm thất nghiệp theo quy định của pháp luật về bảo hiểm thất nghiệp\nvà thời gian làm việc đã được người sử dụng lao động chi trả trợ cấp thôi việc, trợ\ncấp mất việc làm.\n3. Tiền lương để tính trợ cấp thôi việc là tiền lương bình quân của 06 tháng\nliền kề theo hợp đồng lao động trước khi người lao động thôi việc.\n4. Chính phủ quy định chi tiết Điều này.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 2979,
+   "completion_tokens": 131,
+   "llm_calls": 3,
+   "llm_seconds": 4.717
+  },
+  "elapsed_s": 14.09,
+  "cost_usd_if_paid": 0.001221
+ }
+]

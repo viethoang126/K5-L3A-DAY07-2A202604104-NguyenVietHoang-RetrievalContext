@@ -1,0 +1,120 @@
+[
+ {
+  "query_id": "q16",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d169:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q17",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d078:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q18",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d062:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q19",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d061:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q20",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d190:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q21",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d113:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q22",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d128:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q23",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d139:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "u03",
+  "status": "abstain",
+  "n_searches": 1,
+  "citations": [],
+  "stop_reason": "abstain_tool"
+ },
+ {
+  "query_id": "u04",
+  "status": "abstain",
+  "n_searches": 1,
+  "citations": [],
+  "stop_reason": "abstain_tool"
+ }
+]

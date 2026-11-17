@@ -1,0 +1,88 @@
+{
+ "config": "A0_dense_single",
+ "split": "test",
+ "model": "gemini-3.5-flash-lite",
+ "served_models": [
+  "gemini-3.5-flash-lite"
+ ],
+ "cases": 10,
+ "provider_errors": 0,
+ "first_search_hit1": {
+  "n": 8,
+  "N": 8,
+  "text": "8/8",
+  "pct": 100.0
+ },
+ "first_search_hit3": {
+  "n": 8,
+  "N": 8,
+  "text": "8/8",
+  "pct": 100.0
+ },
+ "context_evidence_rate": {
+  "n": 8,
+  "N": 8,
+  "text": "8/8",
+  "pct": 100.0
+ },
+ "cited_chunks_cover_evidence_auto": {
+  "n": 8,
+  "N": 8,
+  "text": "8/8",
+  "pct": 100.0
+ },
+ "searches_distribution": {
+  "1": 10
+ },
+ "mean_searches": 1,
+ "llm_calls": 22,
+ "prompt_tokens": 21248,
+ "completion_tokens": 1857,
+ "median_elapsed_s": 12.925,
+ "cost_usd_if_paid": 0.01102,
+ "cost_usd_actual": 0.0,
+ "avg_context_chars": 2326,
+ "auto_abstention": {
+  "n": 2,
+  "N": 2,
+  "text": "2/2",
+  "pct": 100.0
+ },
+ "auto_false_abstention": {
+  "n": 0,
+  "N": 8,
+  "text": "0/8",
+  "pct": 0.0
+ },
+ "manual": {
+  "cases": 10,
+  "provider_errors": 0,
+  "tool_use": {
+   "n": 10,
+   "N": 10
+  },
+  "grounded_answer": {
+   "0": 0,
+   "1": 0,
+   "2": 8,
+   "N": 8,
+   "mean": 2.0
+  },
+  "citation_validity": {
+   "n": 8,
+   "N": 8
+  },
+  "answer_citation_coverage": {
+   "n": 8,
+   "N": 8
+  },
+  "abstention": {
+   "n": 2,
+   "N": 2
+  },
+  "false_abstention": {
+   "n": 0,
+   "N": 8
+  }
+ }
+}
