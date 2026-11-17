@@ -1,0 +1,213 @@
+[
+ {
+  "query_id": "q01",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d025:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q02",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d026:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q03",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d105:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q04",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d112:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q05",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d098:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q06",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d125:s01"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q07",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d115:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q08",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d102:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q09",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d035:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q10",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d046:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q11",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d107:s00",
+   "blld-2019:B:d107:s01",
+   "blld-2019:B:d108:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": false,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q12",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d020:s01"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q13",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d123:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q14",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d137:s01"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "q15",
+  "status": "answered",
+  "n_searches": 1,
+  "citations": [
+   "blld-2019:B:d146:s00"
+  ],
+  "stop_reason": "answer",
+  "first_search_hit1": true,
+  "first_search_hit3": true,
+  "context_has_evidence": true,
+  "cited_chunks_cover_evidence": true
+ },
+ {
+  "query_id": "u01",
+  "status": "abstain",
+  "n_searches": 1,
+  "citations": [],
+  "stop_reason": "abstain_tool"
+ },
+ {
+  "query_id": "u02",
+  "status": "abstain",
+  "n_searches": 1,
+  "citations": [],
+  "stop_reason": "abstain_tool"
+ }
+]

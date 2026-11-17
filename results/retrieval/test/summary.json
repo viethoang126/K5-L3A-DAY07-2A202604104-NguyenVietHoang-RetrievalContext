@@ -1,0 +1,134 @@
+[
+ {
+  "config": "R1_dense",
+  "method": "dense",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "split": "test",
+  "N": 8,
+  "hit1": {
+   "n": 7,
+   "N": 8,
+   "text": "7/8",
+   "pct": 87.5
+  },
+  "hit3": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "mrr10": 0.938,
+  "context_evidence_rate": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "avg_context_chars": 2351,
+  "median_ms": 15.1,
+  "service_cost_usd": 0,
+  "misses_hit3": [],
+  "misses_context": []
+ },
+ {
+  "config": "R2b_bm25_unigram",
+  "method": "bm25_unigram",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "split": "test",
+  "N": 8,
+  "hit1": {
+   "n": 6,
+   "N": 8,
+   "text": "6/8",
+   "pct": 75.0
+  },
+  "hit3": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "mrr10": 0.854,
+  "context_evidence_rate": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "avg_context_chars": 2378,
+  "median_ms": 0.9,
+  "service_cost_usd": 0,
+  "misses_hit3": [],
+  "misses_context": []
+ },
+ {
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "split": "test",
+  "N": 8,
+  "hit1": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "hit3": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "mrr10": 1.0,
+  "context_evidence_rate": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "avg_context_chars": 2513,
+  "median_ms": 16.9,
+  "service_cost_usd": 0,
+  "misses_hit3": [],
+  "misses_context": []
+ },
+ {
+  "config": "R5_hybrid_rerank",
+  "method": "hybrid_rerank",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "split": "test",
+  "N": 8,
+  "hit1": {
+   "n": 7,
+   "N": 8,
+   "text": "7/8",
+   "pct": 87.5
+  },
+  "hit3": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "mrr10": 0.938,
+  "context_evidence_rate": {
+   "n": 8,
+   "N": 8,
+   "text": "8/8",
+   "pct": 100.0
+  },
+  "avg_context_chars": 2274,
+  "median_ms": 1511.2,
+  "service_cost_usd": 0,
+  "misses_hit3": [],
+  "misses_context": []
+ }
+]
