@@ -1,0 +1,791 @@
+[
+ {
+  "query_id": "q01",
+  "split": "dev",
+  "question": "Công việc yêu cầu trình độ từ cao đẳng trở lên thì được thử việc tối đa bao nhiêu ngày?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash",
+  "status": "answered",
+  "answer": "Thời gian thử việc tối đa đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên là không quá 60 ngày [blld-2019:B:d025:s00].",
+  "citations": [
+   "blld-2019:B:d025:s00"
+  ],
+  "stop_reason": "answer",
+  "events": [
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"thời gian thử việc trình độ cao đẳng\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 24,
+     "prompt_tokens": 559,
+     "total_tokens": 657
+    },
+    "latency_s": 2.215
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "thời gian thử việc trình độ cao đẳng",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 262.3,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d025:s00",
+      "score": 0.90034,
+      "page": 11,
+      "chuong": "III",
+      "dieu": 25
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d024:s00",
+      "score": 0.87516,
+      "page": 11,
+      "chuong": "III",
+      "dieu": 24
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d190:s00",
+      "score": 0.86795,
+      "page": 79,
+      "chuong": "XIV",
+      "dieu": 190
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d025:s00",
+     "blld-2019:B:d024:s00",
+     "blld-2019:B:d190:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d025:s00",
+     "blld-2019:B:d024:s00",
+     "blld-2019:B:d190:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"Thời gian thử việc tối đa đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên là không quá 60 ngày [blld-2019:B:d025:s00].\",\"citations\":[\"blld-2019:B:d025:s00\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 93,
+     "prompt_tokens": 1429,
+     "total_tokens": 1595
+    },
+    "latency_s": 39.317
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Thời gian thử việc tối đa đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên là không quá 60 ngày [blld-2019:B:d025:s00].",
+    "citations": [
+     "blld-2019:B:d025:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d025:s00",
+   "blld-2019:B:d024:s00",
+   "blld-2019:B:d190:s00"
+  ],
+  "final_context": "[blld-2019:B:d025:s00] (Chương III, Điều 25, trang 11-12)\nĐiều 25. Thời gian thử việc\nThời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức\ntạp của công việc nhưng chỉ được thử việc một lần đối với một công việc và bảo\nđảm điều kiện sau đây:\n1. Không quá 180 ngày đối với công việc của người quản lý doanh nghiệp theo\nquy định của Luật Doanh nghiệp, Luật Quản lý, sử dụng vốn nhà nước đầu tư vào\nsản xuất, kinh doanh tại doanh nghiệp;\n2. Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình\nđộ chuyên môn, kỹ thuật từ cao đẳng trở lên;\n3. Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình\nđộ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ;\n4. Không quá 06 ngày làm việc đối với công việc khác.\n\n[blld-2019:B:d024:s00] (Chương III, Điều 24, trang 11)\nĐiều 24. Thử việc\n1. Người sử dụng lao động và người lao động có thể thỏa thuận nội dung thử\nviệc ghi trong hợp đồng lao động hoặc thỏa thuận về thử việc bằng việc giao kết\nhợp đồng thử việc.\n2. Nội dung chủ yếu của hợp đồng thử việc gồm thời gian thử việc và nội dung\nquy định tại các điểm a, b, c, đ, g và h khoản 1 Điều 21 của Bộ luật này.\n3. Không áp dụng thử việc đối với người lao động giao kết hợp đồng lao động\ncó thời hạn dưới 01 tháng.\n\n[blld-2019:B:d190:s00] (Chương XIV, Điều 190, trang 79)\nĐiều 190. Thời hiệu yêu cầu giải quyết tranh chấp lao động cá nhân\n1. Thời hiệu yêu cầu hòa giải viên lao động thực hiện hòa giải tranh chấp lao\nđộng cá nhân là 06 tháng kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho\nrằng quyền và lợi ích hợp pháp của mình bị vi phạm.\n2. Thời hiệu yêu cầu Hội đồng trọng tài lao động giải quyết tranh chấp lao\nđộng cá nhân là 09 tháng kể từ ngày phát hiện ra hành vi mà bên tranh chấp cho\nrằng quyền và lợi ích hợp pháp của mình bị vi phạm.\n3. Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là 01 năm\nkể từ ngày phát hiện ra hành vi mà bên tranh chấp cho rằng quyền và lợi ích hợp\npháp của mình bị vi phạm.\n4. Trường hợp người yêu cầu chứng minh được vì sự kiện bất khả kháng, trở\nngại khách quan hoặc lý do khác theo quy định của pháp luật mà không thể yêu\ncầu đúng thời hạn quy định tại Điều này thì thời gian có sự kiện bất khả kháng, trở\nngại khách quan hoặc lý do đó không tính vào thời hiệu yêu cầu giải quyết tranh\nchấp lao động cá nhân.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1988,
+   "completion_tokens": 117,
+   "llm_calls": 2,
+   "llm_seconds": 41.532
+  },
+  "elapsed_s": 45.81,
+  "cost_usd_if_paid": 0.000889
+ },
+ {
+  "query_id": "q02",
+  "split": "dev",
+  "question": "Tiền lương trong thời gian thử việc ít nhất phải bằng bao nhiêu?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash",
+  "status": "answered",
+  "answer": "Tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó [blld-2019:B:d026:s00].",
+  "citations": [
+   "blld-2019:B:d026:s00"
+  ],
+  "stop_reason": "answer",
+  "events": [
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"tiền lương thử việc\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 20,
+     "prompt_tokens": 553,
+     "total_tokens": 616
+    },
+    "latency_s": 1.514
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "tiền lương thử việc",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 35.2,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d026:s00",
+      "score": 0.92301,
+      "page": 12,
+      "chuong": "III",
+      "dieu": 26
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d024:s00",
+      "score": 0.88285,
+      "page": 11,
+      "chuong": "III",
+      "dieu": 24
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d025:s00",
+      "score": 0.87949,
+      "page": 11,
+      "chuong": "III",
+      "dieu": 25
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d026:s00",
+     "blld-2019:B:d024:s00",
+     "blld-2019:B:d025:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d026:s00",
+     "blld-2019:B:d024:s00",
+     "blld-2019:B:d025:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"citations\":[\"blld-2019:B:d026:s00\"],\"answer\":\"Tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó [blld-2019:B:d026:s00].\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 90,
+     "prompt_tokens": 1162,
+     "total_tokens": 1380
+    },
+    "latency_s": 1.911
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó [blld-2019:B:d026:s00].",
+    "citations": [
+     "blld-2019:B:d026:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d026:s00",
+   "blld-2019:B:d024:s00",
+   "blld-2019:B:d025:s00"
+  ],
+  "final_context": "[blld-2019:B:d026:s00] (Chương III, Điều 26, trang 12)\nĐiều 26. Tiền lương thử việc\nTiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận\nnhưng ít nhất phải bằng 85% mức lương của công việc đó.\n\n[blld-2019:B:d024:s00] (Chương III, Điều 24, trang 11)\nĐiều 24. Thử việc\n1. Người sử dụng lao động và người lao động có thể thỏa thuận nội dung thử\nviệc ghi trong hợp đồng lao động hoặc thỏa thuận về thử việc bằng việc giao kết\nhợp đồng thử việc.\n2. Nội dung chủ yếu của hợp đồng thử việc gồm thời gian thử việc và nội dung\nquy định tại các điểm a, b, c, đ, g và h khoản 1 Điều 21 của Bộ luật này.\n3. Không áp dụng thử việc đối với người lao động giao kết hợp đồng lao động\ncó thời hạn dưới 01 tháng.\n\n[blld-2019:B:d025:s00] (Chương III, Điều 25, trang 11-12)\nĐiều 25. Thời gian thử việc\nThời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức\ntạp của công việc nhưng chỉ được thử việc một lần đối với một công việc và bảo\nđảm điều kiện sau đây:\n1. Không quá 180 ngày đối với công việc của người quản lý doanh nghiệp theo\nquy định của Luật Doanh nghiệp, Luật Quản lý, sử dụng vốn nhà nước đầu tư vào\nsản xuất, kinh doanh tại doanh nghiệp;\n2. Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình\nđộ chuyên môn, kỹ thuật từ cao đẳng trở lên;\n3. Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình\nđộ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ;\n4. Không quá 06 ngày làm việc đối với công việc khác.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1715,
+   "completion_tokens": 110,
+   "llm_calls": 2,
+   "llm_seconds": 3.425
+  },
+  "elapsed_s": 8.42,
+  "cost_usd_if_paid": 0.00079
+ },
+ {
+  "query_id": "q03",
+  "split": "dev",
+  "question": "Thời giờ làm việc bình thường tối đa là bao nhiêu giờ một ngày và một tuần?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash",
+  "status": "answered",
+  "answer": "Theo quy định tại Điều 105 Bộ luật Lao động 2019, thời giờ làm việc bình thường được quy định như sau:\n\n- **Theo ngày/tuần thông thường:** Thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [blld-2019:B:d105:s00].\n- **Trường hợp quy định theo tuần:** Người sử dụng lao động có quyền quy định thời giờ làm việc theo tuần (phải thông báo cho người lao động biết); khi đó, thời giờ làm việc bình thường không quá 10 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [blld-2019:B:d105:s00].\n- **Khuyến khích:** Nhà nước khuyến khích người sử dụng lao động thực hiện tuần làm việc 40 giờ đối với người lao động [blld-2019:B:d105:s00].\n- **Tiếp xúc yếu tố nguy hiểm, có hại:** Người sử dụng lao động có trách nhiệm bảo đảm giới hạn thời gian làm việc tiếp xúc với yếu tố nguy hiểm, yếu tố có hại đúng theo quy chuẩn kỹ thuật quốc gia và pháp luật có liên quan [blld-2019:B:d105:s00].",
+  "citations": [
+   "blld-2019:B:d105:s00"
+  ],
+  "stop_reason": "answer",
+  "events": [
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"thời giờ làm việc bình thường\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 22,
+     "prompt_tokens": 556,
+     "total_tokens": 658
+    },
+    "latency_s": 1.753
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "thời giờ làm việc bình thường",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 48.7,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d105:s00",
+      "score": 0.91727,
+      "page": 44,
+      "chuong": "VII",
+      "dieu": 105
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d032:s00",
+      "score": 0.89795,
+      "page": 14,
+      "chuong": "III",
+      "dieu": 32
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d116:s00",
+      "score": 0.89743,
+      "page": 48,
+      "chuong": "VII",
+      "dieu": 116
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d105:s00",
+     "blld-2019:B:d032:s00",
+     "blld-2019:B:d116:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d105:s00",
+     "blld-2019:B:d032:s00",
+     "blld-2019:B:d116:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"Theo quy định tại Điều 105 Bộ luật Lao động 2019, thời giờ làm việc bình thường được quy định như sau:\\n\\n- **Theo ngày/tuần thông thường:** Thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [blld-2019:B:d105:s00].\\n- **Trường hợp quy định theo tuần:** Người sử dụng lao động có quyền quy định thời giờ làm việc theo tuần (phải thông báo cho người lao động biết); khi đó, thời giờ làm việc bình thường không quá 10 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [blld-2019:B:d105:s00].\\n- **Khuyến khích:** Nhà nước khuyến khích người sử dụng lao động thực hiện tuần làm việc 40 giờ đối với người lao động [blld-2019:B:d105:s00].\\n- **Tiếp xúc yếu tố nguy hiểm, có hại:** Người sử dụng lao động có trách nhiệm bảo đảm giới hạn thời gian làm việc tiếp xúc với yếu tố nguy hiểm, yếu tố có hại đúng theo quy chuẩn kỹ thuật quốc gia và pháp luật có liên quan [blld-2019:B:d105:s00].\",\"citations\":[\"blld-2019:B:d105:s00\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 346,
+     "prompt_tokens": 1549,
+     "total_tokens": 2128
+    },
+    "latency_s": 3.897
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Theo quy định tại Điều 105 Bộ luật Lao động 2019, thời giờ làm việc bình thường được quy định như sau:\n\n- **Theo ngày/tuần thông thường:** Thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [blld-2019:B:d105:s00].\n- **Trường hợp quy định theo tuần:** Người sử dụng lao động có quyền quy định thời giờ làm việc theo tuần (phải thông báo cho người lao động biết); khi đó, thời giờ làm việc bình thường không quá 10 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [blld-2019:B:d105:s00].\n- **Khuyến khích:** Nhà nước khuyến khích người sử dụng lao động thực hiện tuần làm việc 40 giờ đối với người lao động [blld-2019:B:d105:s00].\n- **Tiếp xúc yếu tố nguy hiểm, có hại:** Người sử dụng lao động có trách nhiệm bảo đảm giới hạn thời gian làm việc tiếp xúc với yếu tố nguy hiểm, yếu tố có hại đúng theo quy chuẩn kỹ thuật quốc gia và pháp luật có liên quan [blld-2019:B:d105:s00].",
+    "citations": [
+     "blld-2019:B:d105:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d105:s00",
+   "blld-2019:B:d032:s00",
+   "blld-2019:B:d116:s00"
+  ],
+  "final_context": "[blld-2019:B:d105:s00] (Chương VII, Điều 105, trang 44)\nChương VII\nTHỜI GIỜ LÀM VIỆC, THỜI GIỜ NGHỈ NGƠI\n\nMục 1\nTHỜI GIỜ LÀM VIỆC\n\nĐiều 105. Thời giờ làm việc bình thường\n1. Thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không\nquá 48 giờ trong 01 tuần.\n2. Người sử dụng lao động có quyền quy định thời giờ làm việc theo ngày hoặc\ntuần nhưng phải thông báo cho người lao động biết; trường hợp theo tuần thì thời\ngiờ làm việc bình thường không quá 10 giờ trong 01 ngày và không quá 48 giờ\ntrong 01 tuần.\nNhà nước khuyến khích người sử dụng lao động thực hiện tuần làm việc 40\ngiờ đối với người lao động.\n3. Người sử dụng lao động có trách nhiệm bảo đảm giới hạn thời gian làm việc\ntiếp xúc với yếu tố nguy hiểm, yếu tố có hại đúng theo quy chuẩn kỹ thuật quốc\ngia và pháp luật có liên quan.\n\n[blld-2019:B:d032:s00] (Chương III, Điều 32, trang 14)\nĐiều 32. Làm việc không trọn thời gian\n1. Người lao động làm việc không trọn thời gian là người lao động có thời gian\nlàm việc ngắn hơn so với thời gian làm việc bình thường theo ngày hoặc theo tuần\nhoặc theo tháng được quy định trong pháp luật về lao động, thỏa ước lao động tập\nthể hoặc nội quy lao động.\n2. Người lao động thỏa thuận với người sử dụng lao động làm việc không trọn\nthời gian khi giao kết hợp đồng lao động.\n3. Người lao động làm việc không trọn thời gian được hưởng lương; bình đẳng\ntrong thực hiện quyền và nghĩa vụ với người lao động làm việc trọn thời gian; bình\nđẳng về cơ hội, không bị phân biệt đối xử, bảo đảm an toàn, vệ sinh lao động.\n\n[blld-2019:B:d116:s00] (Chương VII, Điều 116, trang 48)\nMục 3\nTHỜI GIỜ LÀM VIỆC, THỜI GIỜ NGHỈ NGƠI\nĐỐI VỚI NGƯỜI LÀM CÔNG VIỆC CÓ TÍNH CHẤT ĐẶC BIỆT\n\nĐiều 116. Thời giờ làm việc, thời giờ nghỉ ngơi đối với người làm công việc\ncó tính chất đặc biệt\nĐối với các công việc có tính chất đặc biệt trong lĩnh vực vận tải đường bộ,\nđường sắt, đường thủy, đường hàng không; thăm dò, khai thác dầu khí trên biển;\nlàm việc trên biển; trong lĩnh vực nghệ thuật; sử dụng kỹ thuật bức xạ và hạt nhân;\nứng dụng kỹ thuật sóng cao tần; tin học, công nghệ tin học; nghiên cứu ứng dụng\nkhoa học, công nghệ tiên tiến; thiết kế công nghiệp; công việc của thợ lặn; công\nviệc trong hầm lò; công việc sản xuất có tính thời vụ, công việc gia công theo đơn\nđặt hàng; công việc phải thường trực 24/24 giờ; các công việc có tính chất đặc biệt\nkhác do Chính phủ quy định thì các Bộ, ngành quản lý quy định cụ thể thời giờ\nlàm việc, thời giờ nghỉ ngơi sau khi thống nhất với Bộ Lao động - Thương binh và\nXã hội và phải tuân thủ quy định tại Điều 109 của Bộ luật này.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 2105,
+   "completion_tokens": 368,
+   "llm_calls": 2,
+   "llm_seconds": 5.65
+  },
+  "elapsed_s": 14.98,
+  "cost_usd_if_paid": 0.001551
+ },
+ {
+  "query_id": "q04",
+  "split": "dev",
+  "question": "Người lao động được nghỉ Tết Âm lịch mấy ngày có hưởng lương?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash",
+  "status": "answered",
+  "answer": "Theo quy định tại Bộ luật Lao động 2019, người lao động được nghỉ làm việc và hưởng nguyên lương trong dịp Tết Âm lịch là **05 ngày** [blld-2019:B:d112:s00].\n\nMột số lưu ý có liên quan:\n- Đối với người lao động là người nước ngoài làm việc tại Việt Nam, ngoài 05 ngày nghỉ nêu trên còn được nghỉ thêm 01 ngày Tết cổ truyền dân tộc của nước họ [blld-2019:B:d112:s00].\n- Hằng năm, căn cứ vào điều kiện thực tế, Thủ tướng Chính phủ sẽ quyết định cụ thể các ngày nghỉ Tết Âm lịch [blld-2019:B:d112:s00].",
+  "citations": [
+   "blld-2019:B:d112:s00"
+  ],
+  "stop_reason": "answer",
+  "events": [
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"Tết Âm lịch nghỉ lễ tết có hưởng lương\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 27,
+     "prompt_tokens": 553,
+     "total_tokens": 633
+    },
+    "latency_s": 1.234
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "Tết Âm lịch nghỉ lễ tết có hưởng lương",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 37.1,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d112:s00",
+      "score": 0.91983,
+      "page": 46,
+      "chuong": "VII",
+      "dieu": 112
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d098:s00",
+      "score": 0.89598,
+      "page": 42,
+      "chuong": "VI",
+      "dieu": 98
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d113:s00",
+      "score": 0.89232,
+      "page": 47,
+      "chuong": "VII",
+      "dieu": 113
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d112:s00",
+     "blld-2019:B:d098:s00"
+    ],
+    "dropped_budget": [
+     "blld-2019:B:d113:s00"
+    ],
+    "context_ids": [
+     "blld-2019:B:d112:s00",
+     "blld-2019:B:d098:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"citations\":[\"blld-2019:B:d112:s00\"],\"answer\":\"Theo quy định tại Bộ luật Lao động 2019, người lao động được nghỉ làm việc và hưởng nguyên lương trong dịp Tết Âm lịch là **05 ngày** [blld-2019:B:d112:s00].\\n\\nMột số lưu ý có liên quan:\\n- Đối với người lao động là người nước ngoài làm việc tại Việt Nam, ngoài 05 ngày nghỉ nêu trên còn được nghỉ thêm 01 ngày Tết cổ truyền dân tộc của nước họ [blld-2019:B:d112:s00].\\n- Hằng năm, căn cứ vào điều kiện thực tế, Thủ tướng Chính phủ sẽ quyết định cụ thể các ngày nghỉ Tết Âm lịch [blld-2019:B:d112:s00].\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 215,
+     "prompt_tokens": 1358,
+     "total_tokens": 2030
+    },
+    "latency_s": 4.947
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Theo quy định tại Bộ luật Lao động 2019, người lao động được nghỉ làm việc và hưởng nguyên lương trong dịp Tết Âm lịch là **05 ngày** [blld-2019:B:d112:s00].\n\nMột số lưu ý có liên quan:\n- Đối với người lao động là người nước ngoài làm việc tại Việt Nam, ngoài 05 ngày nghỉ nêu trên còn được nghỉ thêm 01 ngày Tết cổ truyền dân tộc của nước họ [blld-2019:B:d112:s00].\n- Hằng năm, căn cứ vào điều kiện thực tế, Thủ tướng Chính phủ sẽ quyết định cụ thể các ngày nghỉ Tết Âm lịch [blld-2019:B:d112:s00].",
+    "citations": [
+     "blld-2019:B:d112:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d112:s00",
+   "blld-2019:B:d098:s00"
+  ],
+  "final_context": "[blld-2019:B:d112:s00] (Chương VII, Điều 112, trang 46-47)\nĐiều 112. Nghỉ lễ, tết\n1. Người lao động được nghỉ làm việc, hưởng nguyên lương trong những ngày\nlễ, tết sau đây:\na) Tết Dương lịch: 01 ngày (ngày 01 tháng 01 dương lịch);\nb) Tết Âm lịch: 05 ngày;\nc) Ngày Chiến thắng: 01 ngày (ngày 30 tháng 4 dương lịch);\nd) Ngày Quốc tế lao động: 01 ngày (ngày 01 tháng 5 dương lịch);\nđ) Quốc khánh: 02 ngày (ngày 02 tháng 9 dương lịch và 01 ngày liền kề trước\nhoặc sau);\ne) Ngày Giỗ Tổ Hùng Vương: 01 ngày (ngày 10 tháng 3 âm lịch).\n2. Lao động là người nước ngoài làm việc tại Việt Nam ngoài các ngày nghỉ\ntheo quy định tại khoản 1 Điều này còn được nghỉ thêm 01 ngày Tết cổ truyền dân\ntộc và 01 ngày Quốc khánh của nước họ.\n3. Hằng năm, căn cứ vào điều kiện thực tế, Thủ tướng Chính phủ quyết định cụ\nthể ngày nghỉ quy định tại điểm b và điểm đ khoản 1 Điều này.\n\n[blld-2019:B:d098:s00] (Chương VI, Điều 98, trang 42)\nĐiều 98. Tiền lương làm thêm giờ, làm việc vào ban đêm\n1. Người lao động làm thêm giờ được trả lương tính theo đơn giá tiền lương\nhoặc tiền lương thực trả theo công việc đang làm như sau:\na) Vào ngày thường, ít nhất bằng 150%;\nb) Vào ngày nghỉ hằng tuần, ít nhất bằng 200%;\nc) Vào ngày nghỉ lễ, tết, ngày nghỉ có hưởng lương, ít nhất bằng 300% chưa kể\ntiền lương ngày lễ, tết, ngày nghỉ có hưởng lương đối với người lao động hưởng\nlương ngày.\n2. Người lao động làm việc vào ban đêm thì được trả thêm ít nhất bằng 30%\ntiền lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc của\nngày làm việc bình thường.\n3. Người lao động làm thêm giờ vào ban đêm thì ngoài việc trả lương theo quy\nđịnh tại khoản 1 và khoản 2 Điều này, người lao động còn được trả thêm 20% tiền\nlương tính theo đơn giá tiền lương hoặc tiền lương theo công việc làm vào ban\nngày của ngày làm việc bình thường hoặc của ngày nghỉ hằng tuần hoặc của ngày\nnghỉ lễ, tết.\n4. Chính phủ quy định chi tiết Điều này.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1911,
+   "completion_tokens": 242,
+   "llm_calls": 2,
+   "llm_seconds": 6.181
+  },
+  "elapsed_s": 14.05,
+  "cost_usd_if_paid": 0.001178
+ },
+ {
+  "query_id": "q05",
+  "split": "dev",
+  "question": "Làm thêm giờ vào ngày nghỉ hằng tuần thì được trả lương ít nhất bao nhiêu phần trăm?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash",
+  "status": "answered",
+  "answer": "Người lao động làm thêm giờ vào ngày nghỉ hằng tuần thì được trả lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc đang làm ít nhất bằng 200% [blld-2019:B:d098:s00].",
+  "citations": [
+   "blld-2019:B:d098:s00"
+  ],
+  "stop_reason": "answer",
+  "events": [
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"tiền lương làm thêm giờ ngày nghỉ hằng tuần phần trăm\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 28,
+     "prompt_tokens": 558,
+     "total_tokens": 644
+    },
+    "latency_s": 5.356
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "tiền lương làm thêm giờ ngày nghỉ hằng tuần phần trăm",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 47.2,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d098:s00",
+      "score": 0.9176,
+      "page": 42,
+      "chuong": "VI",
+      "dieu": 98
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d113:s01",
+      "score": 0.88757,
+      "page": 47,
+      "chuong": "VII",
+      "dieu": 113
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d114:s00",
+      "score": 0.88565,
+      "page": 47,
+      "chuong": "VII",
+      "dieu": 114
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d098:s00",
+     "blld-2019:B:d113:s01",
+     "blld-2019:B:d114:s00"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d098:s00",
+     "blld-2019:B:d113:s01",
+     "blld-2019:B:d114:s00"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"Người lao động làm thêm giờ vào ngày nghỉ hằng tuần thì được trả lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc đang làm ít nhất bằng 200% [blld-2019:B:d098:s00].\",\"citations\":[\"blld-2019:B:d098:s00\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 98,
+     "prompt_tokens": 1325,
+     "total_tokens": 1714
+    },
+    "latency_s": 7.358
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Người lao động làm thêm giờ vào ngày nghỉ hằng tuần thì được trả lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc đang làm ít nhất bằng 200% [blld-2019:B:d098:s00].",
+    "citations": [
+     "blld-2019:B:d098:s00"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d098:s00",
+   "blld-2019:B:d113:s01",
+   "blld-2019:B:d114:s00"
+  ],
+  "final_context": "[blld-2019:B:d098:s00] (Chương VI, Điều 98, trang 42)\nĐiều 98. Tiền lương làm thêm giờ, làm việc vào ban đêm\n1. Người lao động làm thêm giờ được trả lương tính theo đơn giá tiền lương\nhoặc tiền lương thực trả theo công việc đang làm như sau:\na) Vào ngày thường, ít nhất bằng 150%;\nb) Vào ngày nghỉ hằng tuần, ít nhất bằng 200%;\nc) Vào ngày nghỉ lễ, tết, ngày nghỉ có hưởng lương, ít nhất bằng 300% chưa kể\ntiền lương ngày lễ, tết, ngày nghỉ có hưởng lương đối với người lao động hưởng\nlương ngày.\n2. Người lao động làm việc vào ban đêm thì được trả thêm ít nhất bằng 30%\ntiền lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc của\nngày làm việc bình thường.\n3. Người lao động làm thêm giờ vào ban đêm thì ngoài việc trả lương theo quy\nđịnh tại khoản 1 và khoản 2 Điều này, người lao động còn được trả thêm 20% tiền\nlương tính theo đơn giá tiền lương hoặc tiền lương theo công việc làm vào ban\nngày của ngày làm việc bình thường hoặc của ngày nghỉ hằng tuần hoặc của ngày\nnghỉ lễ, tết.\n4. Chính phủ quy định chi tiết Điều này.\n\n[blld-2019:B:d113:s01] (Chương VII, Điều 113, trang 47)\n[Chương VII – Điều 113. Nghỉ hằng năm] 5. Khi nghỉ hằng năm mà chưa đến kỳ trả lương, người lao động được tạm ứng\ntiền lương theo quy định tại khoản 3 Điều 101 của Bộ luật này.\n6. Khi nghỉ hằng năm, nếu người lao động đi bằng các phương tiện đường bộ,\nđường sắt, đường thủy mà số ngày đi đường cả đi và về trên 02 ngày thì từ ngày\nthứ 03 trở đi được tính thêm thời gian đi đường ngoài ngày nghỉ hằng năm và chỉ\nđược tính cho 01 lần nghỉ trong năm.\n7. Chính phủ quy định chi tiết điều này.\n\n[blld-2019:B:d114:s00] (Chương VII, Điều 114, trang 47)\nĐiều 114. Ngày nghỉ hằng năm tăng thêm theo thâm niên làm việc\nCứ đủ 05 năm làm việc cho một người sử dụng lao động thì số ngày nghỉ hằng\nnăm của người lao động theo quy định tại khoản 1 Điều 113 của Bộ luật này được\ntăng thêm tương ứng 01 ngày.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 1883,
+   "completion_tokens": 126,
+   "llm_calls": 2,
+   "llm_seconds": 12.714
+  },
+  "elapsed_s": 15.4,
+  "cost_usd_if_paid": 0.00088
+ },
+ {
+  "query_id": "q06",
+  "split": "dev",
+  "question": "Tự ý nghỉ làm không có lý do bao nhiêu ngày thì có thể bị đuổi việc?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash",
+  "status": "answered",
+  "answer": "Theo quy định tại khoản 4 Điều 125 Bộ luật Lao động 2019, người lao động có thể bị xử lý kỷ luật sa thải (đuổi việc) nếu tự ý bỏ việc không có lý do chính đáng thuộc một trong các trường hợp sau:\n\n- Tự ý bỏ việc **05 ngày cộng dồn trong thời hạn 30 ngày** [blld-2019:B:d125:s01]; hoặc\n- Tự ý bỏ việc **20 ngày cộng dồn trong thời hạn 365 ngày** tính từ ngày đầu tiên tự ý bỏ việc [blld-2019:B:d125:s01].\n\n**Lưu ý:** Trường hợp được coi là có lý do chính đáng bao gồm:\n- Thiên tai, hỏa hoạn [blld-2019:B:d125:s01];\n- Bản thân, thân nhân bị ốm có xác nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền [blld-2019:B:d125:s01];\n- Các trường hợp khác được quy định trong nội quy lao động [blld-2019:B:d125:s01].",
+  "citations": [
+   "blld-2019:B:d125:s01"
+  ],
+  "stop_reason": "answer",
+  "events": [
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"sa thải tự ý bỏ việc không có lý do chính đáng\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 27,
+     "prompt_tokens": 558,
+     "total_tokens": 685
+    },
+    "latency_s": 9.211
+   },
+   {
+    "event": "search",
+    "tool": "search_law",
+    "method": "dense",
+    "query": "sa thải tự ý bỏ việc không có lý do chính đáng",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 50.9,
+    "results": [
+     {
+      "rank": 1,
+      "id": "blld-2019:B:d125:s01",
+      "score": 0.90725,
+      "page": 52,
+      "chuong": "VIII",
+      "dieu": 125
+     },
+     {
+      "rank": 2,
+      "id": "blld-2019:B:d125:s00",
+      "score": 0.88012,
+      "page": 52,
+      "chuong": "VIII",
+      "dieu": 125
+     },
+     {
+      "rank": 3,
+      "id": "blld-2019:B:d137:s01",
+      "score": 0.87586,
+      "page": 56,
+      "chuong": "X",
+      "dieu": 137
+     }
+    ],
+    "added_to_context": [
+     "blld-2019:B:d125:s01",
+     "blld-2019:B:d125:s00",
+     "blld-2019:B:d137:s01"
+    ],
+    "dropped_budget": [],
+    "context_ids": [
+     "blld-2019:B:d125:s01",
+     "blld-2019:B:d125:s00",
+     "blld-2019:B:d137:s01"
+    ]
+   },
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "search_law",
+      "arguments": "{\"query\":\"đơn phương chấm dứt hợp đồng lao động tự ý bỏ việc\"}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 29,
+     "prompt_tokens": 1526,
+     "total_tokens": 1596
+    },
+    "latency_s": 14.614
+   },
+   {
+    "event": "search_rejected",
+    "query": "đơn phương chấm dứt hợp đồng lao động tự ý bỏ việc",
+    "reason": "Đã hết lượt tìm kiếm. Hãy gọi submit_answer với các đoạn đã có hoặc abstain."
+   },
+   {
+    "event": "llm_call",
+    "finish_reason": "tool_calls",
+    "tool_calls": [
+     {
+      "name": "submit_answer",
+      "arguments": "{\"answer\":\"Theo quy định tại khoản 4 Điều 125 Bộ luật Lao động 2019, người lao động có thể bị xử lý kỷ luật sa thải (đuổi việc) nếu tự ý bỏ việc không có lý do chính đáng thuộc một trong các trường hợp sau:\\n\\n- Tự ý bỏ việc **05 ngày cộng dồn trong thời hạn 30 ngày** [blld-2019:B:d125:s01]; hoặc\\n- Tự ý bỏ việc **20 ngày cộng dồn trong thời hạn 365 ngày** tính từ ngày đầu tiên tự ý bỏ việc [blld-2019:B:d125:s01].\\n\\n**Lưu ý:** Trường hợp được coi là có lý do chính đáng bao gồm:\\n- Thiên tai, hỏa hoạn [blld-2019:B:d125:s01];\\n- Bản thân, thân nhân bị ốm có xác nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền [blld-2019:B:d125:s01];\\n- Các trường hợp khác được quy định trong nội quy lao động [blld-2019:B:d125:s01].\",\"citations\":[\"blld-2019:B:d125:s01\"]}"
+     }
+    ],
+    "text": null,
+    "usage": {
+     "completion_tokens": 318,
+     "prompt_tokens": 1629,
+     "total_tokens": 2508
+    },
+    "latency_s": 11.488
+   },
+   {
+    "event": "submit_answer",
+    "answer": "Theo quy định tại khoản 4 Điều 125 Bộ luật Lao động 2019, người lao động có thể bị xử lý kỷ luật sa thải (đuổi việc) nếu tự ý bỏ việc không có lý do chính đáng thuộc một trong các trường hợp sau:\n\n- Tự ý bỏ việc **05 ngày cộng dồn trong thời hạn 30 ngày** [blld-2019:B:d125:s01]; hoặc\n- Tự ý bỏ việc **20 ngày cộng dồn trong thời hạn 365 ngày** tính từ ngày đầu tiên tự ý bỏ việc [blld-2019:B:d125:s01].\n\n**Lưu ý:** Trường hợp được coi là có lý do chính đáng bao gồm:\n- Thiên tai, hỏa hoạn [blld-2019:B:d125:s01];\n- Bản thân, thân nhân bị ốm có xác nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền [blld-2019:B:d125:s01];\n- Các trường hợp khác được quy định trong nội quy lao động [blld-2019:B:d125:s01].",
+    "citations": [
+     "blld-2019:B:d125:s01"
+    ],
+    "invalid": []
+   }
+  ],
+  "context_ids": [
+   "blld-2019:B:d125:s01",
+   "blld-2019:B:d125:s00",
+   "blld-2019:B:d137:s01"
+  ],
+  "final_context": "[blld-2019:B:d125:s01] (Chương VIII, Điều 125, trang 52)\n[Chương VIII – Điều 125. Áp dụng hình thức xử lý kỷ luật sa thải] 4. Người lao động tự ý bỏ việc 05 ngày cộng dồn trong thời hạn 30 ngày hoặc\n20 ngày cộng dồn trong thời hạn 365 ngày tính từ ngày đầu tiên tự ý bỏ việc mà\nkhông có lý do chính đáng.\nTrường hợp được coi là có lý do chính đáng bao gồm thiên tai, hỏa hoạn, bản\nthân, thân nhân bị ốm có xác nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền\nvà trường hợp khác được quy định trong nội quy lao động.\n\n[blld-2019:B:d125:s00] (Chương VIII, Điều 125, trang 52)\nĐiều 125. Áp dụng hình thức xử lý kỷ luật sa thải\nHình thức xử lý kỷ luật sa thải được người sử dụng lao động áp dụng trong\ntrường hợp sau đây:\n1. Người lao động có hành vi trộm cắp, tham ô, đánh bạc, cố ý gây thương\ntích, sử dụng ma túy tại nơi làm việc;\n2. Người lao động có hành vi tiết lộ bí mật kinh doanh, bí mật công nghệ, xâm\nphạm quyền sở hữu trí tuệ của người sử dụng lao động, có hành vi gây thiệt hại\nnghiêm trọng hoặc đe dọa gây thiệt hại đặc biệt nghiêm trọng về tài sản, lợi ích của\nngười sử dụng lao động hoặc quấy rối tình dục tại nơi làm việc được quy định\ntrong nội quy lao động;\n3. Người lao động bị xử lý kỷ luật kéo dài thời hạn nâng lương hoặc cách chức\nmà tái phạm trong thời gian chưa xóa kỷ luật. Tái phạm là trường hợp người lao\nđộng lặp lại hành vi vi phạm đã bị xử lý kỷ luật mà chưa được xóa kỷ luật theo quy\nđịnh tại Điều 126 của Bộ luật này;\n\n[blld-2019:B:d137:s01] (Chương X, Điều 137, trang 56)\n[Chương X – Điều 137. Bảo vệ thai sản] 3. Người sử dụng lao động không được sa thải hoặc đơn phương chấm dứt hợp\nđồng lao động đối với người lao động vì lý do kết hôn, mang thai, nghỉ thai sản,\nnuôi con dưới 12 tháng tuổi, trừ trường hợp người sử dụng lao động là cá nhân\nchết, bị Tòa án tuyên bố mất năng lực hành vi dân sự, mất tích hoặc đã chết hoặc\nngười sử dụng lao động không phải là cá nhân chấm dứt hoạt động hoặc bị cơ quan\nchuyên môn về đăng ký kinh doanh thuộc Ủy ban nhân dân cấp tỉnh ra thông báo\nkhông có người đại diện theo pháp luật, người được ủy quyền thực hiện quyền và\nnghĩa vụ của người đại diện theo pháp luật.\nTrường hợp hợp đồng lao động hết hạn trong thời gian lao động nữ mang thai\nhoặc nuôi con dưới 12 tháng tuổi thì được ưu tiên giao kết hợp đồng lao động mới.\n4. Lao động nữ trong thời gian hành kinh được nghỉ mỗi ngày 30 phút, trong\nthời gian nuôi con dưới 12 tháng tuổi được nghỉ mỗi ngày 60 phút trong thời gian\nlàm việc. Thời gian nghỉ vẫn được hưởng đủ tiền lương theo hợp đồng lao động.",
+  "n_searches": 1,
+  "usage": {
+   "prompt_tokens": 3713,
+   "completion_tokens": 374,
+   "llm_calls": 3,
+   "llm_seconds": 35.313
+  },
+  "elapsed_s": 73.06,
+  "cost_usd_if_paid": 0.002049
+ },
+ {
+  "query_id": "q07",
+  "split": "dev",
+  "question": "Cưới vợ thì được nghỉ mấy ngày mà vẫn có lương?",
+  "answerable": true,
+  "config": "A0_dense_single",
+  "method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "budget": 3000,
+  "neighbours": false,
+  "model": "gemini-3.5-flash",
+  "status": "error",
+  "error": "HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests per day limit exceeded on Free Tier. Se",
+  "answer": null,
+  "citations": [],
+  "events": [],
+  "context_ids": [],
+  "final_context": "",
+  "n_searches": 0,
+  "usage": {},
+  "elapsed_s": null,
+  "cost_usd_if_paid": 0.0
+ }
+]

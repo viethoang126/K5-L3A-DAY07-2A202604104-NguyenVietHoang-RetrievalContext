@@ -1,0 +1,234 @@
+[
+ {
+  "id": "q01",
+  "split": "dev",
+  "question": "Công việc yêu cầu trình độ từ cao đẳng trở lên thì được thử việc tối đa bao nhiêu ngày?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q02",
+  "split": "dev",
+  "question": "Tiền lương trong thời gian thử việc ít nhất phải bằng bao nhiêu?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q03",
+  "split": "dev",
+  "question": "Thời giờ làm việc bình thường tối đa là bao nhiêu giờ một ngày và một tuần?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q04",
+  "split": "dev",
+  "question": "Người lao động được nghỉ Tết Âm lịch mấy ngày có hưởng lương?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q05",
+  "split": "dev",
+  "question": "Làm thêm giờ vào ngày nghỉ hằng tuần thì được trả lương ít nhất bao nhiêu phần trăm?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q06",
+  "split": "dev",
+  "question": "Tự ý nghỉ làm không có lý do bao nhiêu ngày thì có thể bị đuổi việc?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q07",
+  "split": "dev",
+  "question": "Cưới vợ thì được nghỉ mấy ngày mà vẫn có lương?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q08",
+  "split": "dev",
+  "question": "Làm hỏng đồ của công ty thì công ty được trừ vào lương tối đa bao nhiêu mỗi tháng?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q09",
+  "split": "dev",
+  "question": "Tôi ký hợp đồng không thời hạn và muốn nghỉ việc thì phải báo công ty trước bao lâu?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q10",
+  "split": "dev",
+  "question": "Khi nào người lao động được nhận trợ cấp thôi việc và mức trợ cấp được tính thế nào?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q11",
+  "split": "dev",
+  "question": "Mỗi năm người lao động được làm thêm tối đa bao nhiêu giờ, có trường hợp nào được làm nhiều hơn không?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q12",
+  "split": "dev",
+  "question": "Hợp đồng lao động xác định thời hạn đã hết hạn mà người lao động vẫn tiếp tục làm việc thì xử lý thế nào?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q13",
+  "split": "dev",
+  "question": "Thời hiệu xử lý đối với hành vi vi phạm là bao lâu?",
+  "filter": {
+   "chuong": "VIII"
+  },
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q14",
+  "split": "dev",
+  "question": "Người đang nuôi con dưới 12 tháng tuổi được nghỉ bao nhiêu phút mỗi ngày trong giờ làm việc?",
+  "filter": {
+   "chuong": "X"
+  },
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q15",
+  "split": "dev",
+  "question": "Người 16 tuổi được làm việc tối đa bao nhiêu giờ một ngày và một tuần?",
+  "filter": {
+   "chuong": "XI"
+  },
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q16",
+  "split": "test",
+  "question": "Tuổi nghỉ hưu trong điều kiện lao động bình thường được điều chỉnh đến bao nhiêu tuổi?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q17",
+  "split": "test",
+  "question": "Thỏa ước lao động tập thể có thời hạn bao lâu?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q18",
+  "split": "test",
+  "question": "Công ty bỏ tiền cho nhân viên đi học nâng cao tay nghề thì hai bên phải ký giấy tờ gì?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q19",
+  "split": "test",
+  "question": "Người học nghề, tập nghề tại doanh nghiệp phải từ bao nhiêu tuổi?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q20",
+  "split": "test",
+  "question": "Thời hiệu yêu cầu Tòa án giải quyết tranh chấp lao động cá nhân là bao lâu?",
+  "filter": {
+   "chuong": "XIV"
+  },
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q21",
+  "split": "test",
+  "question": "Làm đủ một năm cho một công ty thì người lao động bình thường được nghỉ phép năm bao nhiêu ngày?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q22",
+  "split": "test",
+  "question": "Người lao động bị tạm đình chỉ công việc tối đa bao lâu và trong thời gian đó có được ứng lương không?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "q23",
+  "split": "test",
+  "question": "Lao động nữ được nghỉ thai sản bao lâu, trước khi sinh được nghỉ tối đa bao nhiêu?",
+  "filter": null,
+  "answerable": true,
+  "expected_behavior": "search_and_answer"
+ },
+ {
+  "id": "u01",
+  "split": "dev",
+  "question": "Mức lương tối thiểu vùng I hiện nay là bao nhiêu đồng một tháng?",
+  "absence_reason": "Điều 91 chỉ nói mức lương tối thiểu xác lập theo vùng và do Chính phủ công bố; bộ luật không ghi số tiền nào.",
+  "absence_check_regex": "\\d[\\d.]*\\s*(đồng|triệu)",
+  "filter": null,
+  "answerable": false,
+  "expected_behavior": "search_and_abstain"
+ },
+ {
+  "id": "u02",
+  "split": "dev",
+  "question": "Công ty không ký hợp đồng lao động bằng văn bản với người lao động thì bị phạt tiền bao nhiêu?",
+  "absence_reason": "Mức phạt hành chính nằm ở nghị định xử phạt, không có trong bộ luật; 'phạt tiền' chỉ xuất hiện ở Điều 127 (cấm phạt tiền thay kỷ luật).",
+  "absence_check_regex": "phạt tiền\\s+(từ\\s+)?\\d",
+  "filter": null,
+  "answerable": false,
+  "expected_behavior": "search_and_abstain"
+ },
+ {
+  "id": "u03",
+  "split": "test",
+  "question": "Người lao động phải đóng bảo hiểm xã hội bắt buộc bao nhiêu phần trăm tiền lương mỗi tháng?",
+  "absence_reason": "Điều 168 dẫn chiếu pháp luật về bảo hiểm xã hội; không có tỷ lệ đóng trong bộ luật. Bẫy gần chủ đề: Điều 219 (sửa Luật BHXH) có '20 năm đóng bảo hiểm xã hội' và '61%' (tỷ lệ suy giảm khả năng lao động), không phải tỷ lệ đóng.",
+  "absence_check_regex": "(mức|tỷ lệ) đóng[^.]{0,80}\\d+\\s*%",
+  "filter": null,
+  "answerable": false,
+  "expected_behavior": "search_and_abstain"
+ },
+ {
+  "id": "u04",
+  "split": "test",
+  "question": "Người bị mất việc được hưởng trợ cấp thất nghiệp tối đa bao nhiêu tháng?",
+  "absence_reason": "Trợ cấp thất nghiệp thuộc Luật Việc làm; bộ luật chỉ nhắc tham gia bảo hiểm thất nghiệp, không có thời gian hưởng.",
+  "absence_check_regex": "trợ cấp thất nghiệp",
+  "filter": null,
+  "answerable": false,
+  "expected_behavior": "search_and_abstain"
+ }
+]

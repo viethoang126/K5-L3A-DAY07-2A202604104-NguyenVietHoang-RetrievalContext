@@ -1,0 +1,1910 @@
+[
+ {
+  "query_id": "q01",
+  "split": "dev",
+  "type": "truc_tiep",
+  "question": "Công việc yêu cầu trình độ từ cao đẳng trở lên thì được thử việc tối đa bao nhiêu ngày?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d025:s00",
+    "score": 0.03279,
+    "page": 11,
+    "page_end": 12,
+    "chuong": "III",
+    "dieu": 25,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d113:s00",
+    "score": 0.02862,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d155:s00",
+    "score": 0.02859,
+    "page": 63,
+    "page_end": 63,
+    "chuong": "XI",
+    "dieu": 155,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d097:s00",
+    "score": 0.02837,
+    "page": 41,
+    "page_end": 41,
+    "chuong": "VI",
+    "dieu": 97,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d116:s00",
+    "score": 0.01613,
+    "page": 48,
+    "page_end": 48,
+    "chuong": "VII",
+    "dieu": 116,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d219:s03",
+    "score": 0.01613,
+    "page": 91,
+    "page_end": 91,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d070:s01",
+    "score": 0.01587,
+    "page": 31,
+    "page_end": 32,
+    "chuong": "V",
+    "dieu": 70,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d219:s00",
+    "score": 0.01587,
+    "page": 89,
+    "page_end": 90,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d070:s00",
+    "score": 0.01562,
+    "page": 31,
+    "page_end": 31,
+    "chuong": "V",
+    "dieu": 70,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d109:s00",
+    "score": 0.01562,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 109,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d025:s00",
+   "blld-2019:B:d113:s00",
+   "blld-2019:B:d155:s00"
+  ],
+  "context_chars": 2175,
+  "context_hit": true,
+  "elapsed_ms": 19.8,
+  "gold_dieu_for_analysis": 25
+ },
+ {
+  "query_id": "q02",
+  "split": "dev",
+  "type": "truc_tiep",
+  "question": "Tiền lương trong thời gian thử việc ít nhất phải bằng bao nhiêu?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d026:s00",
+    "score": 0.03279,
+    "page": 12,
+    "page_end": 12,
+    "chuong": "III",
+    "dieu": 26,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d025:s00",
+    "score": 0.03128,
+    "page": 11,
+    "page_end": 12,
+    "chuong": "III",
+    "dieu": 25,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d029:s01",
+    "score": 0.03126,
+    "page": 13,
+    "page_end": 13,
+    "chuong": "III",
+    "dieu": 29,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d024:s00",
+    "score": 0.03078,
+    "page": 11,
+    "page_end": 11,
+    "chuong": "III",
+    "dieu": 24,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d098:s00",
+    "score": 0.02988,
+    "page": 42,
+    "page_end": 42,
+    "chuong": "VI",
+    "dieu": 98,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d027:s00",
+    "score": 0.02895,
+    "page": 12,
+    "page_end": 12,
+    "chuong": "III",
+    "dieu": 27,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d101:s00",
+    "score": 0.02859,
+    "page": 43,
+    "page_end": 43,
+    "chuong": "VI",
+    "dieu": 101,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d097:s00",
+    "score": 0.0284,
+    "page": 41,
+    "page_end": 41,
+    "chuong": "VI",
+    "dieu": 97,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d047:s00",
+    "score": 0.02791,
+    "page": 21,
+    "page_end": 22,
+    "chuong": "III",
+    "dieu": 47,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d041:s00",
+    "score": 0.02778,
+    "page": 18,
+    "page_end": 19,
+    "chuong": "III",
+    "dieu": 41,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d026:s00",
+   "blld-2019:B:d025:s00",
+   "blld-2019:B:d029:s01"
+  ],
+  "context_chars": 1759,
+  "context_hit": true,
+  "elapsed_ms": 18.2,
+  "gold_dieu_for_analysis": 26
+ },
+ {
+  "query_id": "q03",
+  "split": "dev",
+  "type": "truc_tiep",
+  "question": "Thời giờ làm việc bình thường tối đa là bao nhiêu giờ một ngày và một tuần?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d105:s00",
+    "score": 0.03279,
+    "page": 44,
+    "page_end": 44,
+    "chuong": "VII",
+    "dieu": 105,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d107:s00",
+    "score": 0.03226,
+    "page": 44,
+    "page_end": 45,
+    "chuong": "VII",
+    "dieu": 107,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d146:s00",
+    "score": 0.03102,
+    "page": 59,
+    "page_end": 59,
+    "chuong": "XI",
+    "dieu": 146,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d032:s00",
+    "score": 0.0308,
+    "page": 14,
+    "page_end": 14,
+    "chuong": "III",
+    "dieu": 32,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d098:s00",
+    "score": 0.03031,
+    "page": 42,
+    "page_end": 42,
+    "chuong": "VI",
+    "dieu": 98,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d116:s00",
+    "score": 0.02967,
+    "page": 48,
+    "page_end": 48,
+    "chuong": "VII",
+    "dieu": 116,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d113:s00",
+    "score": 0.02858,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d109:s00",
+    "score": 0.02848,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 109,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d111:s00",
+    "score": 0.02845,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 111,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d091:s00",
+    "score": 0.02769,
+    "page": 39,
+    "page_end": 40,
+    "chuong": "VI",
+    "dieu": 91,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d105:s00",
+   "blld-2019:B:d107:s00",
+   "blld-2019:B:d146:s00"
+  ],
+  "context_chars": 2203,
+  "context_hit": true,
+  "elapsed_ms": 19.1,
+  "gold_dieu_for_analysis": 105
+ },
+ {
+  "query_id": "q04",
+  "split": "dev",
+  "type": "truc_tiep",
+  "question": "Người lao động được nghỉ Tết Âm lịch mấy ngày có hưởng lương?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d112:s00",
+    "score": 0.03279,
+    "page": 46,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 112,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d098:s00",
+    "score": 0.03151,
+    "page": 42,
+    "page_end": 42,
+    "chuong": "VI",
+    "dieu": 98,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d113:s00",
+    "score": 0.03151,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d111:s00",
+    "score": 0.0315,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 111,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d115:s00",
+    "score": 0.03037,
+    "page": 47,
+    "page_end": 48,
+    "chuong": "VII",
+    "dieu": 115,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d097:s00",
+    "score": 0.02964,
+    "page": 41,
+    "page_end": 41,
+    "chuong": "VI",
+    "dieu": 97,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d139:s00",
+    "score": 0.02904,
+    "page": 57,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 139,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d137:s01",
+    "score": 0.02879,
+    "page": 56,
+    "page_end": 56,
+    "chuong": "X",
+    "dieu": 137,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d113:s01",
+    "score": 0.02798,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d219:s00",
+    "score": 0.02669,
+    "page": 89,
+    "page_end": 90,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d112:s00",
+   "blld-2019:B:d098:s00"
+  ],
+  "context_chars": 1910,
+  "context_hit": true,
+  "elapsed_ms": 17.1,
+  "gold_dieu_for_analysis": 112
+ },
+ {
+  "query_id": "q05",
+  "split": "dev",
+  "type": "truc_tiep",
+  "question": "Làm thêm giờ vào ngày nghỉ hằng tuần thì được trả lương ít nhất bao nhiêu phần trăm?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d098:s00",
+    "score": 0.03279,
+    "page": 42,
+    "page_end": 42,
+    "chuong": "VI",
+    "dieu": 98,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d107:s00",
+    "score": 0.03151,
+    "page": 44,
+    "page_end": 45,
+    "chuong": "VII",
+    "dieu": 107,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d111:s00",
+    "score": 0.03151,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 111,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d113:s01",
+    "score": 0.0315,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d097:s00",
+    "score": 0.0308,
+    "page": 41,
+    "page_end": 41,
+    "chuong": "VI",
+    "dieu": 97,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d114:s00",
+    "score": 0.02964,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 114,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d113:s00",
+    "score": 0.02878,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d108:s00",
+    "score": 0.02859,
+    "page": 45,
+    "page_end": 45,
+    "chuong": "VII",
+    "dieu": 108,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d109:s00",
+    "score": 0.02859,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 109,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d095:s00",
+    "score": 0.0276,
+    "page": 41,
+    "page_end": 41,
+    "chuong": "VI",
+    "dieu": 95,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d098:s00",
+   "blld-2019:B:d107:s00",
+   "blld-2019:B:d111:s00"
+  ],
+  "context_chars": 2546,
+  "context_hit": true,
+  "elapsed_ms": 18.7,
+  "gold_dieu_for_analysis": 98
+ },
+ {
+  "query_id": "q06",
+  "split": "dev",
+  "type": "dien_dat_lai",
+  "question": "Tự ý nghỉ làm không có lý do bao nhiêu ngày thì có thể bị đuổi việc?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d125:s01",
+    "score": 0.03279,
+    "page": 52,
+    "page_end": 52,
+    "chuong": "VIII",
+    "dieu": 125,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d036:s01",
+    "score": 0.03151,
+    "page": 17,
+    "page_end": 17,
+    "chuong": "III",
+    "dieu": 36,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d113:s00",
+    "score": 0.03151,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d109:s00",
+    "score": 0.02971,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 109,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d137:s01",
+    "score": 0.02942,
+    "page": 56,
+    "page_end": 56,
+    "chuong": "X",
+    "dieu": 137,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d122:s01",
+    "score": 0.02869,
+    "page": 51,
+    "page_end": 51,
+    "chuong": "VIII",
+    "dieu": 122,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d112:s00",
+    "score": 0.02844,
+    "page": 46,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 112,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d111:s00",
+    "score": 0.02769,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 111,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d126:s00",
+    "score": 0.01587,
+    "page": 52,
+    "page_end": 52,
+    "chuong": "VIII",
+    "dieu": 126,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d139:s00",
+    "score": 0.01562,
+    "page": 57,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 139,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d125:s01",
+   "blld-2019:B:d036:s01",
+   "blld-2019:B:d113:s00"
+  ],
+  "context_chars": 2560,
+  "context_hit": true,
+  "elapsed_ms": 15.3,
+  "gold_dieu_for_analysis": 125
+ },
+ {
+  "query_id": "q07",
+  "split": "dev",
+  "type": "dien_dat_lai",
+  "question": "Cưới vợ thì được nghỉ mấy ngày mà vẫn có lương?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d115:s00",
+    "score": 0.03279,
+    "page": 47,
+    "page_end": 48,
+    "chuong": "VII",
+    "dieu": 115,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d137:s01",
+    "score": 0.03175,
+    "page": 56,
+    "page_end": 56,
+    "chuong": "X",
+    "dieu": 137,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d113:s00",
+    "score": 0.03151,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d112:s00",
+    "score": 0.03016,
+    "page": 46,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 112,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d139:s00",
+    "score": 0.02986,
+    "page": 57,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 139,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d219:s02",
+    "score": 0.02914,
+    "page": 90,
+    "page_end": 91,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d111:s00",
+    "score": 0.02872,
+    "page": 46,
+    "page_end": 46,
+    "chuong": "VII",
+    "dieu": 111,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d139:s01",
+    "score": 0.02791,
+    "page": 57,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 139,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d113:s01",
+    "score": 0.02778,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d097:s00",
+    "score": 0.02778,
+    "page": 41,
+    "page_end": 41,
+    "chuong": "VI",
+    "dieu": 97,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d115:s00",
+   "blld-2019:B:d137:s01"
+  ],
+  "context_chars": 1884,
+  "context_hit": true,
+  "elapsed_ms": 15.6,
+  "gold_dieu_for_analysis": 115
+ },
+ {
+  "query_id": "q08",
+  "split": "dev",
+  "type": "dien_dat_lai",
+  "question": "Làm hỏng đồ của công ty thì công ty được trừ vào lương tối đa bao nhiêu mỗi tháng?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d129:s00",
+    "score": 0.03279,
+    "page": 53,
+    "page_end": 53,
+    "chuong": "VIII",
+    "dieu": 129,
+    "hit": false
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d102:s00",
+    "score": 0.02983,
+    "page": 43,
+    "page_end": 43,
+    "chuong": "VI",
+    "dieu": 102,
+    "hit": true
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d029:s01",
+    "score": 0.02939,
+    "page": 13,
+    "page_end": 13,
+    "chuong": "III",
+    "dieu": 29,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d099:s00",
+    "score": 0.02899,
+    "page": 42,
+    "page_end": 42,
+    "chuong": "VI",
+    "dieu": 99,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d219:s01",
+    "score": 0.02885,
+    "page": 90,
+    "page_end": 90,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d113:s00",
+    "score": 0.02748,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d097:s00",
+    "score": 0.02731,
+    "page": 41,
+    "page_end": 41,
+    "chuong": "VI",
+    "dieu": 97,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d046:s00",
+    "score": 0.02674,
+    "page": 21,
+    "page_end": 21,
+    "chuong": "III",
+    "dieu": 46,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d219:s00",
+    "score": 0.02655,
+    "page": 89,
+    "page_end": 90,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d154:s00",
+    "score": 0.01613,
+    "page": 63,
+    "page_end": 63,
+    "chuong": "XI",
+    "dieu": 154,
+    "hit": false
+   }
+  ],
+  "hit1": false,
+  "hit3": true,
+  "rr10": 0.5,
+  "first_hit_rank": 2,
+  "context_ids": [
+   "blld-2019:B:d129:s00",
+   "blld-2019:B:d102:s00",
+   "blld-2019:B:d029:s01"
+  ],
+  "context_chars": 2028,
+  "context_hit": true,
+  "elapsed_ms": 18.7,
+  "gold_dieu_for_analysis": 102
+ },
+ {
+  "query_id": "q09",
+  "split": "dev",
+  "type": "dien_dat_lai",
+  "question": "Tôi ký hợp đồng không thời hạn và muốn nghỉ việc thì phải báo công ty trước bao lâu?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d036:s02",
+    "score": 0.03279,
+    "page": 17,
+    "page_end": 17,
+    "chuong": "III",
+    "dieu": 36,
+    "hit": false
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d035:s00",
+    "score": 0.03175,
+    "page": 15,
+    "page_end": 16,
+    "chuong": "III",
+    "dieu": 35,
+    "hit": true
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d020:s01",
+    "score": 0.03175,
+    "page": 9,
+    "page_end": 10,
+    "chuong": "III",
+    "dieu": 20,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d041:s00",
+    "score": 0.03021,
+    "page": 18,
+    "page_end": 19,
+    "chuong": "III",
+    "dieu": 41,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d038:s00",
+    "score": 0.02988,
+    "page": 18,
+    "page_end": 18,
+    "chuong": "III",
+    "dieu": 38,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d029:s00",
+    "score": 0.02986,
+    "page": 12,
+    "page_end": 13,
+    "chuong": "III",
+    "dieu": 29,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d035:s01",
+    "score": 0.02971,
+    "page": 16,
+    "page_end": 16,
+    "chuong": "III",
+    "dieu": 35,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d033:s00",
+    "score": 0.0289,
+    "page": 14,
+    "page_end": 14,
+    "chuong": "III",
+    "dieu": 33,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d137:s01",
+    "score": 0.02679,
+    "page": 56,
+    "page_end": 56,
+    "chuong": "X",
+    "dieu": 137,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d029:s01",
+    "score": 0.02652,
+    "page": 13,
+    "page_end": 13,
+    "chuong": "III",
+    "dieu": 29,
+    "hit": false
+   }
+  ],
+  "hit1": false,
+  "hit3": true,
+  "rr10": 0.5,
+  "first_hit_rank": 2,
+  "context_ids": [
+   "blld-2019:B:d036:s02",
+   "blld-2019:B:d035:s00",
+   "blld-2019:B:d020:s01"
+  ],
+  "context_chars": 2728,
+  "context_hit": true,
+  "elapsed_ms": 19.8,
+  "gold_dieu_for_analysis": 35
+ },
+ {
+  "query_id": "q10",
+  "split": "dev",
+  "type": "dieu_kien_ngoai_le",
+  "question": "Khi nào người lao động được nhận trợ cấp thôi việc và mức trợ cấp được tính thế nào?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d046:s00",
+    "score": 0.03279,
+    "page": 21,
+    "page_end": 21,
+    "chuong": "III",
+    "dieu": 46,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d041:s01",
+    "score": 0.032,
+    "page": 19,
+    "page_end": 19,
+    "chuong": "III",
+    "dieu": 41,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d041:s00",
+    "score": 0.03151,
+    "page": 18,
+    "page_end": 19,
+    "chuong": "III",
+    "dieu": 41,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d040:s00",
+    "score": 0.03078,
+    "page": 18,
+    "page_end": 18,
+    "chuong": "III",
+    "dieu": 40,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d047:s00",
+    "score": 0.03078,
+    "page": 21,
+    "page_end": 22,
+    "chuong": "III",
+    "dieu": 47,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d042:s01",
+    "score": 0.03058,
+    "page": 20,
+    "page_end": 20,
+    "chuong": "III",
+    "dieu": 42,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d043:s00",
+    "score": 0.02908,
+    "page": 20,
+    "page_end": 20,
+    "chuong": "III",
+    "dieu": 43,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d048:s00",
+    "score": 0.02901,
+    "page": 22,
+    "page_end": 22,
+    "chuong": "III",
+    "dieu": 48,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d139:s00",
+    "score": 0.02598,
+    "page": 57,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 139,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d036:s00",
+    "score": 0.01493,
+    "page": 16,
+    "page_end": 17,
+    "chuong": "III",
+    "dieu": 36,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d046:s00",
+   "blld-2019:B:d041:s01",
+   "blld-2019:B:d041:s00"
+  ],
+  "context_chars": 2905,
+  "context_hit": true,
+  "elapsed_ms": 18.4,
+  "gold_dieu_for_analysis": 46
+ },
+ {
+  "query_id": "q11",
+  "split": "dev",
+  "type": "dieu_kien_ngoai_le",
+  "question": "Mỗi năm người lao động được làm thêm tối đa bao nhiêu giờ, có trường hợp nào được làm nhiều hơn không?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d107:s00",
+    "score": 0.03279,
+    "page": 44,
+    "page_end": 45,
+    "chuong": "VII",
+    "dieu": 107,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d108:s00",
+    "score": 0.03175,
+    "page": 45,
+    "page_end": 45,
+    "chuong": "VII",
+    "dieu": 108,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d107:s01",
+    "score": 0.03083,
+    "page": 45,
+    "page_end": 45,
+    "chuong": "VII",
+    "dieu": 107,
+    "hit": true
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d219:s01",
+    "score": 0.03033,
+    "page": 90,
+    "page_end": 90,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d146:s00",
+    "score": 0.0303,
+    "page": 59,
+    "page_end": 59,
+    "chuong": "XI",
+    "dieu": 146,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d219:s03",
+    "score": 0.02985,
+    "page": 91,
+    "page_end": 91,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d219:s00",
+    "score": 0.02878,
+    "page": 89,
+    "page_end": 90,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d098:s00",
+    "score": 0.02872,
+    "page": 42,
+    "page_end": 42,
+    "chuong": "VI",
+    "dieu": 98,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d113:s00",
+    "score": 0.02778,
+    "page": 47,
+    "page_end": 47,
+    "chuong": "VII",
+    "dieu": 113,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d219:s04",
+    "score": 0.02724,
+    "page": 91,
+    "page_end": 91,
+    "chuong": "XVII",
+    "dieu": 219,
+    "hit": false
+   }
+  ],
+  "hit1": false,
+  "hit3": true,
+  "rr10": 0.3333333333333333,
+  "first_hit_rank": 3,
+  "context_ids": [
+   "blld-2019:B:d107:s00",
+   "blld-2019:B:d108:s00",
+   "blld-2019:B:d107:s01"
+  ],
+  "context_chars": 2767,
+  "context_hit": true,
+  "elapsed_ms": 21.7,
+  "gold_dieu_for_analysis": 107
+ },
+ {
+  "query_id": "q12",
+  "split": "dev",
+  "type": "dieu_kien_ngoai_le",
+  "question": "Hợp đồng lao động xác định thời hạn đã hết hạn mà người lao động vẫn tiếp tục làm việc thì xử lý thế nào?",
+  "filter": null,
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d020:s01",
+    "score": 0.03279,
+    "page": 9,
+    "page_end": 10,
+    "chuong": "III",
+    "dieu": 20,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d036:s00",
+    "score": 0.03126,
+    "page": 16,
+    "page_end": 17,
+    "chuong": "III",
+    "dieu": 36,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d035:s00",
+    "score": 0.03078,
+    "page": 15,
+    "page_end": 16,
+    "chuong": "III",
+    "dieu": 35,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d083:s00",
+    "score": 0.03062,
+    "page": 37,
+    "page_end": 38,
+    "chuong": "V",
+    "dieu": 83,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d041:s00",
+    "score": 0.02963,
+    "page": 18,
+    "page_end": 19,
+    "chuong": "III",
+    "dieu": 41,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d036:s02",
+    "score": 0.02924,
+    "page": 17,
+    "page_end": 17,
+    "chuong": "III",
+    "dieu": 36,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d036:s01",
+    "score": 0.02896,
+    "page": 17,
+    "page_end": 17,
+    "chuong": "III",
+    "dieu": 36,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d020:s00",
+    "score": 0.02837,
+    "page": 9,
+    "page_end": 9,
+    "chuong": "III",
+    "dieu": 20,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d041:s01",
+    "score": 0.02744,
+    "page": 19,
+    "page_end": 19,
+    "chuong": "III",
+    "dieu": 41,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d138:s00",
+    "score": 0.02715,
+    "page": 56,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 138,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d020:s01",
+   "blld-2019:B:d036:s00"
+  ],
+  "context_chars": 2342,
+  "context_hit": true,
+  "elapsed_ms": 22.0,
+  "gold_dieu_for_analysis": 20
+ },
+ {
+  "query_id": "q13",
+  "split": "dev",
+  "type": "metadata_filter",
+  "question": "Thời hiệu xử lý đối với hành vi vi phạm là bao lâu?",
+  "filter": {
+   "chuong": "VIII"
+  },
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d123:s00",
+    "score": 0.03279,
+    "page": 51,
+    "page_end": 51,
+    "chuong": "VIII",
+    "dieu": 123,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d122:s00",
+    "score": 0.03151,
+    "page": 50,
+    "page_end": 51,
+    "chuong": "VIII",
+    "dieu": 122,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d127:s00",
+    "score": 0.03126,
+    "page": 52,
+    "page_end": 53,
+    "chuong": "VIII",
+    "dieu": 127,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d125:s00",
+    "score": 0.03125,
+    "page": 52,
+    "page_end": 52,
+    "chuong": "VIII",
+    "dieu": 125,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d126:s00",
+    "score": 0.03083,
+    "page": 52,
+    "page_end": 52,
+    "chuong": "VIII",
+    "dieu": 126,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d122:s01",
+    "score": 0.0308,
+    "page": 51,
+    "page_end": 51,
+    "chuong": "VIII",
+    "dieu": 122,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d124:s00",
+    "score": 0.02924,
+    "page": 51,
+    "page_end": 52,
+    "chuong": "VIII",
+    "dieu": 124,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d128:s00",
+    "score": 0.0292,
+    "page": 53,
+    "page_end": 53,
+    "chuong": "VIII",
+    "dieu": 128,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d118:s00",
+    "score": 0.02901,
+    "page": 49,
+    "page_end": 49,
+    "chuong": "VIII",
+    "dieu": 118,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d130:s00",
+    "score": 0.02885,
+    "page": 54,
+    "page_end": 54,
+    "chuong": "VIII",
+    "dieu": 130,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d123:s00",
+   "blld-2019:B:d122:s00",
+   "blld-2019:B:d127:s00"
+  ],
+  "context_chars": 2134,
+  "context_hit": true,
+  "elapsed_ms": 15.2,
+  "gold_dieu_for_analysis": 123
+ },
+ {
+  "query_id": "q14",
+  "split": "dev",
+  "type": "metadata_filter",
+  "question": "Người đang nuôi con dưới 12 tháng tuổi được nghỉ bao nhiêu phút mỗi ngày trong giờ làm việc?",
+  "filter": {
+   "chuong": "X"
+  },
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d137:s01",
+    "score": 0.03279,
+    "page": 56,
+    "page_end": 56,
+    "chuong": "X",
+    "dieu": 137,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d137:s00",
+    "score": 0.03226,
+    "page": 56,
+    "page_end": 56,
+    "chuong": "X",
+    "dieu": 137,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d139:s01",
+    "score": 0.03175,
+    "page": 57,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 139,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d139:s00",
+    "score": 0.03125,
+    "page": 57,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 139,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d141:s00",
+    "score": 0.03054,
+    "page": 57,
+    "page_end": 58,
+    "chuong": "X",
+    "dieu": 141,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d142:s00",
+    "score": 0.03054,
+    "page": 58,
+    "page_end": 58,
+    "chuong": "X",
+    "dieu": 142,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d138:s00",
+    "score": 0.02942,
+    "page": 56,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 138,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d140:s00",
+    "score": 0.02941,
+    "page": 57,
+    "page_end": 57,
+    "chuong": "X",
+    "dieu": 140,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d136:s00",
+    "score": 0.02921,
+    "page": 55,
+    "page_end": 55,
+    "chuong": "X",
+    "dieu": 136,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d135:s00",
+    "score": 0.02878,
+    "page": 55,
+    "page_end": 55,
+    "chuong": "X",
+    "dieu": 135,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d137:s01",
+   "blld-2019:B:d137:s00",
+   "blld-2019:B:d139:s01"
+  ],
+  "context_chars": 2291,
+  "context_hit": true,
+  "elapsed_ms": 14.7,
+  "gold_dieu_for_analysis": 137
+ },
+ {
+  "query_id": "q15",
+  "split": "dev",
+  "type": "metadata_filter",
+  "question": "Người 16 tuổi được làm việc tối đa bao nhiêu giờ một ngày và một tuần?",
+  "filter": {
+   "chuong": "XI"
+  },
+  "config": "R3_hybrid",
+  "method": "hybrid",
+  "k": 3,
+  "budget": 3000,
+  "neighbours": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "blld-2019:B:d146:s00",
+    "score": 0.03279,
+    "page": 59,
+    "page_end": 59,
+    "chuong": "XI",
+    "dieu": 146,
+    "hit": true
+   },
+   {
+    "rank": 2,
+    "id": "blld-2019:B:d143:s00",
+    "score": 0.03175,
+    "page": 58,
+    "page_end": 58,
+    "chuong": "XI",
+    "dieu": 143,
+    "hit": false
+   },
+   {
+    "rank": 3,
+    "id": "blld-2019:B:d145:s00",
+    "score": 0.03128,
+    "page": 59,
+    "page_end": 59,
+    "chuong": "XI",
+    "dieu": 145,
+    "hit": false
+   },
+   {
+    "rank": 4,
+    "id": "blld-2019:B:d147:s00",
+    "score": 0.03037,
+    "page": 60,
+    "page_end": 60,
+    "chuong": "XI",
+    "dieu": 147,
+    "hit": false
+   },
+   {
+    "rank": 5,
+    "id": "blld-2019:B:d148:s00",
+    "score": 0.03031,
+    "page": 60,
+    "page_end": 61,
+    "chuong": "XI",
+    "dieu": 148,
+    "hit": false
+   },
+   {
+    "rank": 6,
+    "id": "blld-2019:B:d145:s01",
+    "score": 0.02944,
+    "page": 59,
+    "page_end": 59,
+    "chuong": "XI",
+    "dieu": 145,
+    "hit": false
+   },
+   {
+    "rank": 7,
+    "id": "blld-2019:B:d166:s00",
+    "score": 0.02942,
+    "page": 66,
+    "page_end": 66,
+    "chuong": "XI",
+    "dieu": 166,
+    "hit": false
+   },
+   {
+    "rank": 8,
+    "id": "blld-2019:B:d162:s00",
+    "score": 0.02941,
+    "page": 65,
+    "page_end": 65,
+    "chuong": "XI",
+    "dieu": 162,
+    "hit": false
+   },
+   {
+    "rank": 9,
+    "id": "blld-2019:B:d151:s00",
+    "score": 0.02908,
+    "page": 62,
+    "page_end": 62,
+    "chuong": "XI",
+    "dieu": 151,
+    "hit": false
+   },
+   {
+    "rank": 10,
+    "id": "blld-2019:B:d155:s00",
+    "score": 0.02886,
+    "page": 63,
+    "page_end": 63,
+    "chuong": "XI",
+    "dieu": 155,
+    "hit": false
+   }
+  ],
+  "hit1": true,
+  "hit3": true,
+  "rr10": 1.0,
+  "first_hit_rank": 1,
+  "context_ids": [
+   "blld-2019:B:d146:s00",
+   "blld-2019:B:d143:s00",
+   "blld-2019:B:d145:s00"
+  ],
+  "context_chars": 2440,
+  "context_hit": true,
+  "elapsed_ms": 17.0,
+  "gold_dieu_for_analysis": 146
+ }
+]

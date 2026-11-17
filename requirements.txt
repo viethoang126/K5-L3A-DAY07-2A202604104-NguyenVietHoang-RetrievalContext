@@ -1,0 +1,6 @@
+# Tested on Windows 11, Python 3.12.10 (same versions as Day 6).
+chromadb==1.5.9
+sentence-transformers==6.3.0
+torch==2.15.0
+transformers==5.23.0
+# LLM calls use urllib (stdlib); BM25/RRF are implemented in src/retrievers.py.
