@@ -1,6 +1,6 @@
 # Báo cáo Day 7: Agentic RAG trên Bộ luật Lao động 2019
 
-MSSV: 2A202604104 · Họ tên: Nguyễn Việt Hoàng · Lớp K5-L3A
+MSSV: 2A202604104 · Họ tên: Nguyễn Việt Hoàng · Lớp: L3B
 
 **Kết luận chính:** Sau khi sửa 2 lỗi agent tìm ra trên dev, cấu hình đơn giản nhất **A0 (dense Day 6, 1 lượt tìm, top-3, 3000 ký tự)** đạt chất lượng bằng cấu hình phức tạp nhất A2 (hybrid RRF + cross-encoder, tối đa 3 lượt) mà tốn ít token hơn khoảng 25%, nên được chọn. Trên test, A0 đạt grounded 8/8 câu điểm 2 (trung bình 2,00/2), citation hợp lệ 8/8, từ chối đúng 2/2, không từ chối nhầm. Rerank cải thiện Hit@1 của retrieval trên dev (12/15 → 14/15) nhưng không cải thiện câu trả lời vì top-3 của dense đã chứa đủ evidence ở cả 15 câu.
 
